@@ -1,0 +1,165 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+:root {
+
+    --first-main: #d6ebed; 
+    --second-main: #aacbf6; 
+    --third-main: #FEFF86; 
+    --fourth-main: #e2c3bf; 
+    --fifth-main: #f8e7fa; 
+    --sixth-main: #39211a; 
+    --seventh-main: #703d10;
+    --eighth-main: #65b4d9; 
+    --ninth-main: #b9d8d1;
+    --tenth-main: #c3a74b;
+}
+
+
+
+Body {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100vh;
+    background-color: var(--fifth-main);
+    background-image: url('../images/figuras/cupcakes-deliciosos-com-copia-espaco.jpg');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+Body .area-Obrigado {
+    
+    text-align: center;
+    margin-right: 8em;
+    z-index: 8;
+    
+}
+
+.area-Obrigado h1 {
+    font-size: 7em;
+    color: var(--sixth-main);
+    font-weight: 400;
+    font-family: Bitthai Script;
+    margin: .2em;
+}
+
+.area-Obrigado h3 {
+    font-size: 1.3em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    
+    color: var(--sixth-main);
+    margin-top: 2em;
+}
+
+a {
+    margin-top: 2em;
+    padding: 1em;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    display: block;
+    border: .15em solid #e5afa8;
+    border-radius: .5em;
+    color: var(--sixth-main);
+    transition: 0.3s; 
+    background: linear-gradient(-90deg,#e5afa8,var(--fifth-main));  
+
+}
+
+a:hover {
+    background: transparent;
+    background-color: #e5afa8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.ProdutBorder3 {
+
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    border: 1em solid #FEFF86;
+    opacity: 0;
+    position: absolute;
+    top: 30em;
+    right: -10em;
+    animation: slideLeft 3s ease forwards;
+    animation-delay: 2s;
+    z-index: 1;
+}
+.ProdutBorder3 .ProdutBorder4 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #dede81;
+    
+}
+@keyframes slideLeft {
+    0% {
+        transform: translatex(600px);   
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+.ProdutBorder0 {
+
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 1em solid #FEFF86;
+    opacity: 0;
+    position: absolute;
+    top: 38em;
+    left: 40em;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 2s;
+    z-index: 1;
+}
+.ProdutBorder1 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #dede81;
+    
+}
+
+.ProdutBorder2 {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: .6em solid #FEFF86;
+    opacity: 0;
+    position: relative;
+    top: 5em;
+    left: 20em;
+    animation: slideLeft 3s ease forwards;
+    animation-delay: 3s;
+    z-index: 1;
+    transition: 0.3s;
+} 
+@keyframes slideLeft {
+    0% {
+        transform: translatex(600px);   
+        opacity: 0;
+    }
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+.ProdutBorder2:hover {
+    transform: scale(1.1);
+}
