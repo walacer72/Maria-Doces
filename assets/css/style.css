@@ -1,4 +1,11 @@
 
+@font-face {
+    font-family: 'Bitthai';
+    src: url('/fonts/Bitthai\ Script.otf') format('opentype'), 
+    url('/fonts/Bitthai\ Script.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0px;
@@ -13,7 +20,7 @@
   --second-main: #aacbf6; 
   --third-main: #FEFF86; 
   --fourth-main: #e2c3bf; 
-  --fifth-main: #f8e7fa; 
+  --fifth-main: #f0e9f1; 
   --sixth-main: #603628; 
   --seventh-main: #703d10;
   --eighth-main: #65b4d9; 
@@ -41,7 +48,7 @@ body {
     align-items: center;
     position: fixed;
     box-shadow: 0px 5px 60px #999; 
-    border-bottom: .2em solid var(--fifth-main);
+    border-bottom: .1em solid var(--fifth-main);
     z-index: 999;
     opacity: 1;
     transition: 1s;
@@ -120,8 +127,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: ring 2s linear infinite;
+    
 }
+
+/*
+
+.menuNav .circulo {
+    animation: ring 2s linear infinite; 
+}
+
 @keyframes ring {
     0%{
         transform: rotate(0deg);
@@ -148,7 +162,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(255,255,255,.3);
 }
-
+*/
 
 
 .menuList {
@@ -237,7 +251,7 @@ body {
     color: var(--sixth-main);
     padding-top: 1em;
     padding-bottom: 10px;
-    font-family: Bitthai Script;
+    font-family: 'Bitthai';
     font-weight: 400;
 
 }
