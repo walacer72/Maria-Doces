@@ -252,7 +252,7 @@ body {
     padding-top: 1em;
     padding-bottom: 10px;
     font-weight: 400;
-    font-family: 'Bitthai', sans-serif;
+    font-family: 'Bitthai','Sacramento';
 }
 
 #Home .home-area1-info p {
@@ -424,7 +424,7 @@ body {
     color: var(--sixth-main);
     
     padding-bottom: 0.5em;
-    font-family: 'Bitthai';
+    font-family: 'Bitthai','Sacramento';
     font-weight: 500;
     
 
@@ -510,7 +510,7 @@ body {
     justify-content: center;
     font-size: 4.5em;
     color: var(--seventh-main);
-    font-family: 'Bitthai';
+    font-family: 'Bitthai','Sacramento';
     font-weight: 400;
 
 }
@@ -651,7 +651,7 @@ body {
 
 #Produtos .info-outrosprodutos h1 {
     width: 500px;
-    font-family: 'Bitthai';
+    font-family: 'Bitthai','Sacramento';
     font-weight: 400;
     font-size: 6em;
     
@@ -742,7 +742,7 @@ body {
 
 .KitFesta h3 {
     color: var(--seventh-main);
-    font-family: 'Bitthai';
+    font-family: 'Bitthai','Sacramento';
     font-weight: 400;  
     font-size: 2.5em;
 }
@@ -750,7 +750,7 @@ body {
 .KitFesta p {
     font-size: 4.5em;
     color: var(--seventh-main);
-    font-family: Bitthai Script;
+    font-family: 'Bitthai','Sacramento';
     font-weight: 400;   
 }
 
@@ -812,7 +812,7 @@ body {
     color: var(--sixth-main);
     font-weight: 400;
     font-size: 8em;
-    font-family: 'Bitthai';
+    font-family: 'Bitthai','Sacramento';
     margin-bottom: .5em;    
     margin-top: .8em;
 }
