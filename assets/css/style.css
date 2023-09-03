@@ -417,7 +417,7 @@ body {
     flex-direction: column;    
     justify-content: center;
     max-width: 35em;
-    z-index: 99;
+    z-index: 5;
 }
 
 .SobreNos .info-SobreNos h1 {
@@ -425,7 +425,7 @@ body {
     color: var(--sixth-main);
     
     padding-bottom: 0.5em;
-    font-family: Bitthai Script;
+    font-family: 'Bitthai';
     font-weight: 500;
     
 
@@ -493,9 +493,6 @@ body {
     flex-direction: column;
     
 }
-
-
-
 #Produtos h1 {
     display: flex;
     justify-content: center;
@@ -514,7 +511,7 @@ body {
     justify-content: center;
     font-size: 4.5em;
     color: var(--seventh-main);
-    font-family: Bitthai Script;
+    font-family: 'Bitthai';
     font-weight: 400;
 
 }
@@ -655,7 +652,7 @@ body {
 
 #Produtos .info-outrosprodutos h1 {
     width: 500px;
-    font-family: Bitthai Script;
+    font-family: 'Bitthai';
     font-weight: 400;
     font-size: 6em;
     
@@ -746,7 +743,7 @@ body {
 
 .KitFesta h3 {
     color: var(--seventh-main);
-    font-family: Bitthai Script;
+    font-family: 'Bitthai';
     font-weight: 400;  
     font-size: 2.5em;
 }
@@ -816,7 +813,7 @@ body {
     color: var(--sixth-main);
     font-weight: 400;
     font-size: 8em;
-    font-family: Bitthai Script;
+    font-family: 'Bitthai';
     margin-bottom: .5em;    
     margin-top: .8em;
 }
