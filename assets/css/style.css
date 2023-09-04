@@ -1,8 +1,8 @@
 
 @font-face {
     font-family: 'Bitthai';
-    src: url('/fonts/Bitthai\ Script.otf') format('opentype'), 
-    url('/fonts/Bitthai\ Script.ttf') format('truetype');
+    src: url('fonts/Bitthai\ Script.otf') format('opentype'), 
+    url('fonts/Bitthai\ Script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +18,7 @@
 
   --first-main: #d6ebed; 
   --second-main: #aacbf6; 
-  --third-main: #FEFF86; 
+  --third-main: #fafa87; 
   --fourth-main: #e2c3bf; 
   --fifth-main: #f0e9f1; 
   --sixth-main: #603628; 
@@ -387,6 +387,7 @@ body {
 .SobreNos .area-SobreNos {
     display: flex;
     justify-content: space-between;
+    gap: 5em;   
 }
 
 .SobreNos .border-SobreNos {
@@ -415,8 +416,9 @@ body {
     display: flex;
     flex-direction: column;    
     justify-content: center;
-    max-width: 35em;
+    min-width: 8em;
     z-index: 5;
+    
 }
 
 .SobreNos .info-SobreNos h1 {
@@ -436,6 +438,8 @@ body {
     font-weight: 400;
     color: var(--seventh-main);
     line-height: 1.7em;
+    flex-wrap: wrap;
+    
     
 }
 
@@ -893,8 +897,8 @@ body {
 /* FOOTER */
 
 footer {
-    background-color: var(--third-main);
-    border-top: 1px solid #cfc18e;
+    background-color: var(--second-main);
+    border-top: 1px solid var(--eighth-main);
     padding: 1em;
     display: flex;
     justify-content: center;    
@@ -1019,7 +1023,7 @@ i .bi.bi-whatsapp, i .bi.bi-facebook {
     border-radius: 50%;
     padding: .6em;
     transition: 0.3s;
-    background: var(--eighth-main);
+    background: var(--tenth-main);
     margin-right: .5em;
 }
 
