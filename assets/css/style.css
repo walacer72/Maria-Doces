@@ -1,8 +1,8 @@
 
 @font-face {
     font-family: 'Bitthai';
-    src: url('fonts/Bitthai Script.otf') format('opentype'), 
-    url('fonts/Bitthai Script.ttf') format('truetype');
+    src: url('/fonts/Bitthai Script.otf') format('opentype'), 
+    url('/fonts/Bitthai Script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -73,7 +73,7 @@ body {
     height: 250px;
     position: absolute;
     border-radius: 100%;
-    box-shadow: 15px 10px 15px var( --fourth-main);
+    box-shadow: 15px 10px 15px var(--fourth-main);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +168,7 @@ body {
 .menuList {
     display: flex;
     justify-content: end;
-    margin-bottom: 0;
+    
     transition: 1s;
 }
 
@@ -193,6 +193,34 @@ body {
 .menuNav .nav-link:hover,
 .menuNav .nav-link.active {
     color: var(--eighth-main);
+    
+}
+
+@media (max-width:768px) {
+    .container {
+        min-width: 70em; 
+       
+    }
+
+    .menuNav .menuLogo {
+        width: 200px;
+        height: 200px;
+        left: 2em;
+    }
+
+    .menuLogo img {
+        width: 203px;
+        height: 203px;
+        
+    }
+
+    .menuNav .nav-link {
+        font-size: 1.05em;
+    }
+
+    .menuList { 
+        margin-right: 5em;
+    }
     
 }
 
@@ -223,13 +251,13 @@ body {
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 50em;
+    max-height: calc(50em + 90px);
 }
 
 .home-area {
     display: flex;
     justify-content: space-between; 
-    max-height: 50em;
+   
 }
 
 
@@ -241,7 +269,7 @@ body {
     
     justify-content: center;
     margin: 0;
-    padding: 0; 
+    padding-bottom: 3em; 
     cursor: default;
 }
 
@@ -318,9 +346,6 @@ body {
     
 }
 
-.home-area2 {
-    position: relative;
-}
 
 #Home .home-circulo2 {
     position: relative;
@@ -337,9 +362,13 @@ body {
     animation-delay: 1s;
     
 }
+
+.home-area2 {
+    position: relative;
+}
+
 .home-area2 .home-circulo1 img {
     width: 40em;
-    
     position: relative;
     top: 7.1em;
     z-index: 0;
@@ -375,14 +404,56 @@ body {
     }
 }
 
+@media (max-width:768px) {
+    .Home {
+        
+        height: calc(40em + 90px);
+    }
+
+    #Home .home-area1-info {
+        margin-left: 2em;
+        min-width: 25em;
+    }
+
+    #Home .home-area1-info h1 {
+        font-size: 5em;
+        
+    }
+
+    #Home .home-area1-info p {
+        
+        width: 25em;
+    }
+
+    .home-area2 .home-circulo1 img {
+        width: 32em;
+        top: 7em;   
+    }
+
+    #Home .home-circulo2 {
+        width: 40em;
+        height: 40em;
+        bottom: 32em;
+        right: -8em;
+        border: 25px solid var(--tenth-main);
+    }
+    
+    #Home .home-circulo1 {
+        width: 35em;
+        height: 35em;
+        left: 12em;
+        top: 2em;
+    }
+}
+
 /* SECTION SOBRE NOS */
 
 .SobreNos {
     display: flex;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 2.5em;
     
-    margin-bottom: 5em;
+    margin-bottom: 2.5em;
 }
 .SobreNos .area-SobreNos {
     display: flex;
@@ -416,7 +487,7 @@ body {
     display: flex;
     flex-direction: column;    
     justify-content: center;
-    min-width: 8em;
+    max-width: 45em;
     z-index: 5;
     
 }
@@ -454,7 +525,7 @@ body {
     border: 2.5em solid #FEFF86;
     opacity: 0;
     position: absolute;
-    top: 40em;
+    top: 42em;
     left: -30em;
     animation: slideRight 3s ease forwards;
     animation-delay: 4s;
@@ -483,12 +554,13 @@ body {
 .Produtos {
 
     
-    margin-top: 5em;
+    margin-top: 2.5em;
     background: rgba(222, 235, 232, .3);
     display: flex;
     flex-direction: column;
     padding: 0px;
     position: relative;
+    margin-bottom: 2.5em;
 }
 
 #Produtos .area-name-Produtos {
@@ -601,7 +673,7 @@ body {
     box-shadow: 0 0 1.5rem var(--eighth-main);
     overflow: hidden;
     transition: all 0.2s;
-    animation: animationImg 1s ease-in-out forwards;
+    animation: animationImg .5s ease-in-out forwards;
 }
 
 @keyframes animationImg {
@@ -703,7 +775,8 @@ body {
 
 .KitFesta {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 5em;
     margin-bottom: 5em;
     padding: 5em;
@@ -717,10 +790,12 @@ body {
 
 .KitFesta .area-kitFesta {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 2em;
     gap: 10px;
 }
+
+
 
 .KitFesta li {
     list-style: none;
@@ -730,6 +805,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     cursor: pointer;
+    text-align: center;
 }
 
 .KitFesta li:hover {
@@ -742,6 +818,7 @@ body {
     font-weight: 400;
     font-size: 6em;
     margin-top: .4em;
+    
 }
 
 .KitFesta h3 {
@@ -749,6 +826,7 @@ body {
     font-family: 'Bitthai','Sacramento';
     font-weight: 400;  
     font-size: 2.5em;
+    text-align: center;
 }
 
 .KitFesta p {
@@ -760,6 +838,7 @@ body {
 
 .KitFesta a {
     display: block;
+    text-align: center;
     margin-top: 1em;
     border: .1em solid var(--eighth-main);
     background: transparent;
@@ -780,7 +859,7 @@ body {
 }
 
 .KitFesta .kits {
-    width: 250px;
+    min-width: 18em;
     
     border: 1px solid var(--eighth-main);
     padding:20px;
@@ -806,7 +885,7 @@ body {
 
 
 
-.contato form {
+.contato .formValidator {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -830,18 +909,18 @@ body {
     font-style: italic;
 }
 
-.contato form .area-labelflex {
+.contato .formValidator .area-labelflex {
     display: flex;
     gap: 1em;
 }
 
-.contato form label {
+.contato .formValidator label {
     display: flex;
     flex-direction: column;
     
 }
 
-.contato form label input, textarea {
+.contato .formValidator label input, textarea {
     margin-bottom: 1em;
     
     padding: 1em;
@@ -856,12 +935,12 @@ body {
     padding-left: 0;
 }
 
-.contato form label textarea {
+.contato .formValidator label textarea {
     width: 100%;
     resize: none;
 }
 
-.contato form label input::placeholder, textarea::placeholder {
+.contato .formValidator label input::placeholder, textarea::placeholder {
     color: var(--sixth-main);   
 }
 

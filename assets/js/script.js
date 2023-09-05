@@ -111,7 +111,7 @@ function showList(lista, button = "b1") {
     }
 }
 
-
+showList(listProdutos, "b1");
 
 buttonGeralProdutos.forEach((item)=>{
     item.addEventListener('click', (e)=>{
@@ -132,7 +132,7 @@ buttonGeralProdutos.forEach((item)=>{
     });
 });
 
-showList(listProdutos, "b1");
+;
 
 /*
 showListContato(listProdutos, "b1");
