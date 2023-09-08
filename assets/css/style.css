@@ -198,7 +198,7 @@ body {
 
 @media (max-width:768px) {
     .container {
-        min-width: 70em; 
+        max-width: 70em; 
        
     }
 
@@ -215,12 +215,13 @@ body {
     }
 
     .menuNav .nav-link {
-        font-size: 1.05em;
+        font-size: 1em;
+        padding-left: 1em;
+        
     }
 
-    .menuList { 
-        margin-right: 5em;
-    }
+    
+    
     
 }
 
@@ -410,19 +411,23 @@ body {
         height: calc(40em + 90px);
     }
 
+
+    
     #Home .home-area1-info {
-        margin-left: 2em;
-        min-width: 25em;
+        margin-left: 3em;
+        max-width: 17em;
+        min-width: 0;
     }
 
     #Home .home-area1-info h1 {
-        font-size: 5em;
+        font-size: 3.5em;
+        padding-top: 2em;
         
     }
 
     #Home .home-area1-info p {
-        
-        width: 25em;
+        font-size: 1.2em;
+        max-width: 15em;
     }
 
     .home-area2 .home-circulo1 img {
@@ -430,18 +435,22 @@ body {
         top: 7em;   
     }
 
+    #Home .home-area2 {
+        max-width: 27em;
+        margin-right: 10em;
+    }
     #Home .home-circulo2 {
         width: 40em;
         height: 40em;
         bottom: 32em;
-        right: -8em;
+        
         border: 25px solid var(--tenth-main);
     }
     
     #Home .home-circulo1 {
         width: 35em;
         height: 35em;
-        left: 12em;
+        
         top: 2em;
     }
 }
@@ -549,7 +558,25 @@ body {
     }
 }
 
+@media (max-width:768px) {
+    .SobreNos .area-SobreNos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 0;
+    }
 
+    .SobreNos .info-SobreNos h1 {
+        text-align: center;
+    }
+
+    .SobreNos .info-SobreNos p {
+        text-align: center;
+    }
+
+    
+}
 
 .Produtos {
 
@@ -673,7 +700,7 @@ body {
     box-shadow: 0 0 1.5rem var(--eighth-main);
     overflow: hidden;
     transition: all 0.2s;
-    animation: animationImg .5s ease-in-out forwards;
+    animation: animationImg 1s ease-in-out forwards;
 }
 
 @keyframes animationImg {
@@ -771,6 +798,36 @@ body {
     height: 18em;
 }
 
+@media (max-width:768px) {
+    #Produtos h1 {
+        font-size: 4.5em;
+    }
+
+    #Produtos h3 {
+        font-size: 3.5em;
+    }
+
+    .Produtos .barraProdutos li {
+        
+        margin: 1.2em;
+        padding: 2em;
+        font-size: 0.7em; 
+    }
+
+    .Produto-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Produtos .produtosextras {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img-grid1, .img-grid2, .img-grid3 {
+        height: 28em;
+    }
+}
+
 /* KIT FESTA */
 
 .KitFesta {
@@ -789,10 +846,12 @@ body {
 }
 
 .KitFesta .area-kitFesta {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2em;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    margin: 2em;
     gap: 10px;
+
 }
 
 
@@ -859,19 +918,38 @@ body {
 }
 
 .KitFesta .kits {
-    min-width: 18em;
+   
     
     border: 1px solid var(--eighth-main);
     padding:20px;
     border-radius: 5px;
     background: linear-gradient(var(--first-main),var(--fifth-main));
     transition: 0.3s;
+    
 }
 
 .KitFesta .kits:hover {
     box-shadow: 0em 0em 3em var(--second-main);  
     transform: scale(1.05);
     transition: 0.3s;
+}
+
+@media (max-width:768px) {
+    .KitFesta h1 {
+        font-size: 5em;
+    }
+
+    .KitFesta p {
+        font-size: 4em;
+    }
+
+    .KitFesta .area-kitFesta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+        
+
+
 }
 
 /* ORÇAMENTO */
