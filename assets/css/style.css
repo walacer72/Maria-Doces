@@ -1,8 +1,7 @@
 
 @font-face {
     font-family: 'Bitthai';
-    src: url('/fonts/Bitthai Script.otf') format('opentype'), 
-    url('/fonts/Bitthai Script.ttf') format('truetype');
+    src: url('fonts/Bitthai Script.otf') format('opentype'), url('fonts/Bitthai Script.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -280,7 +279,7 @@ body {
     color: var(--sixth-main);
     padding-top: 1em;
     padding-bottom: 10px;
-    font-weight: 400;
+    font-weight: normal;
     font-family: 'Bitthai','Sacramento';
 }
 
