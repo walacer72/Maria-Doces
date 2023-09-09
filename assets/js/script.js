@@ -277,12 +277,10 @@ let inputs = form.querySelectorAll('input, textarea');
 
 inputs.forEach((item) => {
     item.addEventListener('click', (e)=>{
-        let errorElements = document.querySelector('.error');
         let currentInput = e.target;
 
         if (currentInput.value !== '') { 
             currentInput.style.borderColor = '#65b4d9';
-            errorElements.remove();
         }
                
                 

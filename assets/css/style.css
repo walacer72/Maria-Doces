@@ -1,10 +1,4 @@
 
-@font-face {
-    font-family: 'Bitthai';
-    src: url('fonts/Bitthai Script.otf') format('opentype'), url('fonts/Bitthai Script.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 * {
     margin: 0px;
@@ -129,7 +123,7 @@ body {
     
 }
 
-/*
+
 
 .menuNav .circulo {
     animation: ring 2s linear infinite; 
@@ -138,15 +132,15 @@ body {
 @keyframes ring {
     0%{
         transform: rotate(0deg);
-        box-shadow: 1px 5px 2px #bf828f;
+        box-shadow: 1px 3px 1px #bf828f;
     }
     50%{
         transform: rotate(180deg);
-        box-shadow: 1px 5px 2px #14bCaa;
+        box-shadow: 1px 3px 1px #14bCaa;
     }
     100%{
         transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #FEFF86;
+        box-shadow: 1px 3px 1px #FEFF86;
     }
     
 }
@@ -161,7 +155,7 @@ body {
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(255,255,255,.3);
 }
-*/
+
 
 
 .menuList {
@@ -991,13 +985,13 @@ body {
     gap: 1em;
 }
 
-.contato .formValidator label {
+.contato .formValidator .form-column {
     display: flex;
     flex-direction: column;
     
 }
 
-.contato .formValidator label input, textarea {
+.contato .formValidator .form-column input, textarea { 
     margin-bottom: 1em;
     
     padding: 1em;
@@ -1012,12 +1006,12 @@ body {
     padding-left: 0;
 }
 
-.contato .formValidator label textarea {
+.contato .formValidator textarea {
     width: 100%;
     resize: none;
 }
 
-.contato .formValidator label input::placeholder, textarea::placeholder {
+.contato .formValidator input::placeholder, textarea::placeholder {
     color: var(--sixth-main);   
 }
 
