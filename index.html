@@ -36,18 +36,19 @@
   </div>
 
     <!-- NAVBAR -->
-  <header id="header">
-    <nav class="menuNav container-fluid">
-      <div class="container">
+  <header id="header" class="container-fluid">
+    
+    <div class="container">
+      
+      <a href="#" class="menuLogo">
+        <div class="circulo"></div>
+        <img src="./assets/images/logo/logo1.png" alt="Image maria">
         
-        <a href="#" class="menuLogo">
-          <div class="circulo"></div>
-          <img src="./assets/images/logo/logo1.png" alt="Image maria">
-          
-        </a>
+      </a>
 
-        
 
+      <nav class="menuNav">
+    
         <ul class="menuList">
           <li class="nav-item">
             <a href="#Home" class="nav-link active">Home</a>
@@ -64,17 +65,16 @@
           <li class="nav-item">
             <a href="#Contato" class="nav-link">Contato</a>
           </li>
-          
-
-          <button class="navbar-menu">
-            <div class="nav-barra"></div>
-            <div class="nav-barra"></div>
-            <div class="nav-barra"></div>
-          </button>
         </ul>
 
-        
-      </div>
+        <button class="navbar-menu">
+          <div class="nav-barra"></div>
+          <div class="nav-barra"></div>
+          <div class="nav-barra"></div>
+        </button>
+      </nav>
+      
+    </div>
 
     </nav>
   </header>
@@ -264,7 +264,7 @@
       
         <h1 data-aos="fade-up">Orçamento</h1>         
         <div class="area-labelflex">
-          <div style="width: 50%" class="area-column">
+          <div style="width: 100%" class="area-column">
             <div class="form-column">
               <input type="text" name="Nome" placeholder="Nome" data-rules="required|min=2">   
             </div>
@@ -273,7 +273,7 @@
               <input type="tel" name="Telefone" placeholder="Telefone" data-rules="required"> 
             </div>
           </div>
-          <div style="width: 50%" class="area-column">  
+          <div style="width: 100%" class="area-column">  
             <div class="form-column">
               <input type="email" name="E-mail" placeholder="E-mail" data-rules="required">
             </div>

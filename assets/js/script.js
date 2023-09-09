@@ -4,11 +4,11 @@
 function decidirBotaoScroll() {
 
     if (window.scrollY === 0) {
-        let menu = document.querySelector('.menuNav');
+        let menu = document.querySelector('#header');
         menu.style.backgroundColor = '#d6ebed'; 
         menu.style.height = '90px';
 
-        let logo = document.querySelector('.menuNav .menuLogo');
+        let logo = document.querySelector('#header .menuLogo');
         logo.style.opacity = 0;
         logo.style.animation = 'slideBottom 1s ease forwards';
 
@@ -17,11 +17,11 @@ function decidirBotaoScroll() {
 
     } else {
         
-        let menu = document.querySelector('.menuNav');
+        let menu = document.querySelector('#header');
         menu.style.background = 'rgba(208, 243, 247, .9)';
         menu.style.height = '65px';
 
-        let logo = document.querySelector('.menuNav .menuLogo');
+        let logo = document.querySelector('#header .menuLogo');
         logo.style.opacity = 1;
         logo.style.animation = 'slideScrollBottom 1s ease forwards';
 
@@ -53,6 +53,18 @@ window.onscroll = () => {
             });
         };
 
+    });
+};
+
+// FUNÇÃO DE CLICK MENUMOBILE //
+
+window.onload = function(){
+    document.querySelector(".menuMOBILE").addEventListener("click", function(){
+        if(document.querySelector(".menu nav ul").style.display == 'flex') {
+            document.querySelector(".menu nav ul").style.display = 'none';
+        } else {
+            document.querySelector(".menu nav ul").style.display = 'flex';
+        }
     });
 };
 
