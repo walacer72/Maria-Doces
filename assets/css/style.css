@@ -1,11 +1,13 @@
 
 
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     
 }
+
 
 :root {
 
@@ -327,6 +329,14 @@ body {
     background: linear-gradient(-90deg,var(--first-main),var(--fourth-main));
 }
 
+#Home .home-area1-info i .bi.bi-tiktok {
+    border: .1em solid var(--fifth-main);
+    border-radius: 50%;
+    padding: .5em;
+    transition: 0.3s;
+    background: linear-gradient(-90deg,var(--first-main),var(--fourth-main));
+}
+
 #Home .home-area1-info i .bi.bi-instagram:hover {
     border: .1em solid var(--seventh-main);
     color: var(--seventh-main);
@@ -335,6 +345,14 @@ body {
 }
 
 #Home .home-area1-info i .bi.bi-whatsapp:hover {
+    border: .1em solid var(--seventh-main);
+    color: var(--seventh-main);
+    transform: scale(1.1);
+    background: transparent;
+    
+}
+
+#Home .home-area1-info i .bi.bi.bi-tiktok:hover {
     border: .1em solid var(--seventh-main);
     color: var(--seventh-main);
     transform: scale(1.1);
@@ -455,9 +473,10 @@ body {
 .SobreNos {
     display: flex;
     justify-content: center;
-    margin-top: 2.5em;
+    
     padding: 2em;
-    margin-bottom: 2.5em;
+   
+    
 }
 .SobreNos .area-SobreNos {
     display: flex;
@@ -468,8 +487,8 @@ body {
 .SobreNos .border-SobreNos {
     position: relative;
     z-index: 5;
-    margin-top: 10em;
-    margin-bottom: 10em;
+    margin-top: 8em;
+    margin-bottom: 3em;
     width: 35em;
     height: 35em;
     border-radius: 50%;
@@ -570,7 +589,9 @@ body {
         text-align: center;
     }
 
-    
+    .SobreNos .border-SobreNos {
+        margin-bottom: 6em;
+    }
 }
 
 .Produtos {
@@ -928,7 +949,7 @@ body {
     transition: 0.3s;
 }
 
-@media (max-width:1000px) {
+@media (max-width:900px) {
     .KitFesta h1 {
         font-size: 5em;
     }
@@ -1047,10 +1068,12 @@ body {
     padding: 0;
 }
 
-@media (max-width:768px) {
+@media (max-width:900px) {
     .contato .formValidator .area-labelflex {
         flex-direction: column;
+        gap: 0;
     }
+    
 
     .contato h1 {
         font-size: 6em;
@@ -1058,8 +1081,8 @@ body {
         margin-bottom: 0;
     }
 
-    .contato p {
-        font-size: .5em;
+    .contato .formValidator input::placeholder, textArea::placeholder {
+        font-size: .9em;
     }
 
     .contato .formValidator .form-column input, textarea {
@@ -1087,24 +1110,15 @@ footer .column {
 footer .area-footer {
     display: flex;
     
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1em;
 }
 
-footer .area-footer-logo {
-    min-width: 25em;
-    
-}
-footer .area-footer-logo img {
-    width: 20em;
-    
-}
 
 footer .area-footer-endereco {
     flex: 1;
     display: flex;
-    justify-content: space-around ;
-    align-items: center;
+    flex-direction: column;
     min-width: 25em;
     border-right: 1px solid var(--eighth-main);
     border-left: 1px solid var(--eighth-main);
@@ -1118,17 +1132,13 @@ footer .area-footer-endereco li {
     color: var(--sixth-main);   
 }
 
-footer .area-footer-titulos {
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
-}
 
-footer .area-footer-titulos h1 {
+
+footer h1 {
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 2em;
     justify-content: center;
-    flex: 1;
+    
     font-size: 1.3em;
     font-family: 'Montserrat', sans-serif;
     color: var(--sixth-main);
@@ -1138,8 +1148,7 @@ footer .area-footer-titulos h1 {
 footer .area-footer-contato {
     flex: 1;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     min-width: 25em;
 }
 
@@ -1155,6 +1164,17 @@ footer .social-icons {
     flex: 1;
     margin-bottom: 1em;
     display: flex;
+    flex-direction: column;
+}
+
+footer .area-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.col-info {
+    display: flex;
+    justify-content: space-around;
 }
 footer .copy {
     display: flex;
@@ -1221,4 +1241,53 @@ footer .social-icons i .bi.bi.bi-facebook:hover {
     color: #fff;
     transform: scale(1.2);
     background: var(--eighth-main);
+}
+
+@media (max-width:900px) {
+    
+    
+    footer .social-icons {
+        width: 40em;
+        justify-content: space-between;
+        padding: 2em;
+        padding-top: 0;
+    }
+
+    footer .area-footer-endereco {
+        width: 40em;
+        justify-content: space-between;
+        padding: 2em;
+    }
+
+    footer .area-footer-contato {
+        width: 40em;
+        justify-content: space-between;
+        padding: 2em;
+    }
+
+    footer .area-footer-endereco .start, .area-footer-contato .start {
+        text-align: start;
+    }
+
+    footer .area-footer-endereco .end, .area-footer-contato .end {
+        text-align: end;
+    }
+
+
+    footer .area-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .area-footer-endereco {
+        border-top: 1px solid var(--eighth-main);
+        border-bottom: 1px solid var(--eighth-main);
+        border-left: none;
+        border-right: none;
+    }
+
+    footer .copy {
+        flex-direction: column;
+        align-items: center;
+    }
 }
