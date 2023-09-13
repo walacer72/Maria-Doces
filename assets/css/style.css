@@ -45,7 +45,7 @@ body {
 
 #header {
     
-    height: 90px;
+    height: 70px;
     display: flex;
     background-color: var(--first-main);
     justify-content: center;
@@ -62,8 +62,8 @@ body {
 
 
 #header .menuLogo {
-    width: 250px;
-    height: 250px;
+    width: 225px;
+    height: 225px;
     position: absolute;
     border-radius: 100%;
     box-shadow: 15px 10px 15px var(--fourth-main);
@@ -106,8 +106,8 @@ body {
 
 
 .menuLogo img {
-    width: 255px;
-    height: 255px;
+    width: 230px;
+    height: 230px;
     
     
 }
@@ -120,14 +120,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-
-
-
-#header .circulo {
     animation: ring 2s linear infinite; 
 }
+
+
+
+
 
 @keyframes ring {
     0%{
@@ -208,14 +206,14 @@ body {
     gap: .5rem;
     position: fixed;
     right: 0;
-    top: 0;
-    margin: 2.5em;
+    margin: 2em;
     background-color: transparent;
     border: none;
+    transition: .5s;
 }
 
 #hamburguer {
-    width: 32px;
+    width: 28px;
     border-top: 2px solid;
     color: #703d10;
     display: block;
@@ -224,11 +222,11 @@ body {
 
 #hamburguer::before, #hamburguer::after {
     content: '';
-    width: 32px;
+    width: 28px;
     background: currentColor;
     height: 2px;
     display: block;
-    margin-top: 10px;
+    margin-top: 7px;
     transition: .3s;
     position: relative;
 }
@@ -266,17 +264,18 @@ body {
     .menuList {
         display: block;
         flex-direction: column;
-        text-align: center;
+        text-align: end;
         transition: 1s;
         background: rgba(208, 243, 247, .8);
         width: 100%;
         position: relative;
-        top: 90px;
+        top: 65px;
         height: 0;
-        
         overflow-y :hidden;
         visibility: hidden;
     }
+
+    
 
     .menuList.active {
         
@@ -298,7 +297,7 @@ body {
 
     .navbar-menu.active #hamburguer::after {
         transform: rotate(-135deg);
-        top: -12px;
+        top: -9px;
     }
 
 
@@ -319,25 +318,16 @@ body {
         border-bottom: 1px solid var(--eighth-main);
     }
 
-    #header a .logo-mobile img {
-        display: flex;
-        width: 2px;
-        
     
+
+    #header .menuLogo, .menuLogo img {
+        width: 9em;
+        height: 9em;
+        left: 1em;
+        z-index: 999;
     }
 
-    #header .menuLogo {
-        display: none;
-    }
-
-    #header .logo-mobile {
-        display: flex;
-        width: 10em;
-        position: absolute;
-        margin: .5em;
-        margin-left: 1.5em;
-       
-    }
+    
     
 }
 
@@ -370,13 +360,14 @@ body {
     margin: 0;
     padding-bottom: 3em; 
     cursor: default;
+    
 }
 
 #Home .home-area1-info h1 {
     
     font-size: 85px;
     color: var(--sixth-main);
-    padding-top: 1em;
+   
     padding-bottom: 10px;
     font-weight: normal;
     font-family: 'Bitthai','Sacramento';
@@ -571,37 +562,35 @@ body {
 
 @media (min-width:290px) and (max-width:700px) {
     #Home .home-area1-info {
-        margin-left: 3em;
         max-width: 17em;
-        min-width: 0;
         position: absolute;
-        top: 24em;
+        top: 22em;
         z-index: 10;
-        left: 3em;
+        left: .5em;
         flex-direction: row;
-        gap: 2em;
+        
 
-    }
-
-    #Home .home-circulo2 {
-        width: 30em;
-        height: 30em;
-        bottom: 25em;
-        border: 18px solid var(--tenth-main);
-        right: -6em ;
-    
     }
 
     #Home .home-circulo1 {
-        width: 26em;
-        height: 26em;
+        width: 22em;
+        height: 22em;
         top: 1em;
-        left: 10em;
+        left: 11em;
     }
 
     .home-area2 .home-circulo1 img {
-        width: 22em;
-        top: 6em;   
+        width: 19em;
+        top: 5em;   
+    }
+
+    #Home .home-circulo2 {
+        width: 27em;
+        height: 27em;
+        bottom: 22em;
+        border: 18px solid var(--tenth-main);
+        right: -7em ;
+    
     }
 
     #Home .social-icons {
@@ -626,6 +615,7 @@ body {
 
     
 }
+
 
 /* SECTION SOBRE NOS */
 
@@ -704,8 +694,8 @@ body {
     width: 80em;
     height: 80em;
     border-radius: 50%;
-    border: 2.5em solid #FEFF86;
-    opacity: 0;
+    border: 2.5em solid #ecec8d;
+    
     position: absolute;
     top: 42em;
     left: -30em;
@@ -751,17 +741,34 @@ body {
     .SobreNos .border-SobreNos {
         margin-bottom: 6em;
     }
+
+    .ProdutBorder3 {
+        width: 70em;
+        height: 70em;
+        top: 42em;
+        left: -20em;
+        border: 2em solid #ecec8d;
+    }
+
+    
 }
 
 @media (min-width:290px) and (max-width:700px) {
-    .SobreNos .border-SobreNos img {
-        width: 25em;
-        
+
+    .ProdutBorder3 {
+        width: 50em;
+        height: 50em;
+        top: 42em;
+        left: -25em;
+        border: 1.5em solid #ecec8d;
     }
 
-    .SobreNos .border-SobreNos {
-        width: 25em;
-        height: 25em;
+    
+
+    .SobreNos .border-SobreNos, .border-SobreNos img {
+        width: 20em;
+        height: 20em;
+        border: 10px solid #dede81;
     }
 
     .SobreNos .info-SobreNos h1 {
@@ -997,6 +1004,7 @@ body {
 }
 
 @media (max-width:900px) {
+
     #Produtos h1 {
         font-size: 4.5em;
     }
@@ -1024,25 +1032,34 @@ body {
     .img-grid1, .img-grid2, .img-grid3 {
         height: 28em;
     }
+
 }
 
 @media (min-width:290px) and (max-width:700px) {
     #Produtos h1 {
-        font-size: 3.5em;
+        font-size: 3em;
+    }
+
+    #Produtos h3 {
+        font-size: 3em;
+    }
+
+    .Produto-area {
+        gap: 1em 1em;
     }
 
     .Produtos .barraProdutos li {
         
         margin: .5em;
-        
-        font-size: 0.7em; 
+        padding: 0;
+        font-size: .6em; 
     }
 
     .Produtos .Produto-area li {
-        width: 12em;
+        width: 10em;
     }
     .img-grid1, .img-grid2, .img-grid3 {
-        height: 18em;
+        height: 15em;
     }
 }
 
@@ -1172,6 +1189,10 @@ body {
 }
 
 @media (min-width:290px) and (max-width:700px) {
+
+    .KitFesta .area-kitFesta {
+        gap: .9em;
+    }
     .KitFesta h1 {
         font-size: 4em;
     }
@@ -1182,8 +1203,20 @@ body {
 
     .KitFesta .kits {
    
-    
-        padding: 1.5em 2.5em;
+        padding: .7em 1.2em;
+        
+    }
+
+    .KitFesta .kits h3 {
+   
+        font-size: 1.5em;
+        
+    }
+
+    .KitFesta .kits ul li {
+   
+        font-size: .8em;
+        
         
         
     }
