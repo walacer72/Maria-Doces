@@ -40,14 +40,16 @@
       
       <a href="#" class="menuLogo">
         <div class="circulo"></div>
-        <img src="./assets/images/logo/logo1.png" alt="Image maria">
+        <img src="./assets/images/logo/logo1.png" alt="Image logo maria">
         
       </a>
-
+      
+      <img class="logo-mobile" src="./assets/images/logo/logotipo.png" alt="Image logo maria">
 
       <nav class="menuNav">
-    
-        <ul class="menuList">
+        
+
+        <ul class="menuList" id="menuList" role="menu"> 
           <li class="nav-item">
             <a href="#Home" class="nav-link active">Home</a>
           </li>
@@ -65,12 +67,11 @@
           </li>
         </ul>
 
-        <button class="navbar-menu">
-          <div class="nav-barra"></div>
-          <div class="nav-barra"></div>
-          <div class="nav-barra"></div>
+        <button class="navbar-menu" aria-label="Abrir Menu" aria-expanded="false" aria-controls="menuList" aria-haspopup="true">
+          <span id="hamburguer"></span>
         </button>
       </nav>
+      
       
     </div>
 
@@ -81,8 +82,11 @@
   <section class="Home container-fluid" id="Home">
     <div class="home-area container">
       <div class="home-area1-info">
-        <h1>Seja bem vindo!</h1>
-        <p>Bolos, doces e sobremesas artesanais de alta qualidade esperam por você!</p>
+        
+        <div class="area-bemVindo">
+          <h1>Seja bem vindo!</h1>
+          <p>Bolos, doces e sobremesas artesanais de alta qualidade esperam por você!</p>
+        </div>
         <div class="social-icons">
           <a target="_blank" href="https://wa.me/5521995311763">
 
@@ -316,7 +320,7 @@
           <div class="area-icons">
             <a target="_blank" href="https://wa.me/5521995311763"><i><i class="bi bi-whatsapp"></i></i></a>
             <a target="_blank" href="https://www.instagram.com/maria_doces_s2/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"><i><i class="bi bi-instagram"></i></i></a>
-            <a href="#"><i><i class="bi bi-facebook"></i></i></a>
+            <a target="_blank" href="https://www.tiktok.com/@francianemoreira89"><i><i class="bi bi-tiktok"></i></i></a>
           </div>
         </div>        
         <div class="area-footer-endereco">

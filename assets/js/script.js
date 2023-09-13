@@ -6,26 +6,26 @@ function decidirBotaoScroll() {
     if (window.scrollY === 0) {
         let menu = document.querySelector('#header');
         menu.style.backgroundColor = '#d6ebed'; 
-        menu.style.height = '90px';
+        
 
         let logo = document.querySelector('#header .menuLogo');
         logo.style.opacity = 0;
         logo.style.animation = 'slideBottom 1s ease forwards';
 
-        let menuCenter = document.querySelector('.menuList');
+        let menuCenter = document.querySelector('.menuNav');
         menuCenter.style.justifyContent = 'end';
 
     } else {
         
         let menu = document.querySelector('#header');
-        menu.style.background = 'rgba(208, 243, 247, .9)';
-        menu.style.height = '65px';
+        menu.style.background = 'rgba(208, 243, 247, .8)';
+        
 
         let logo = document.querySelector('#header .menuLogo');
         logo.style.opacity = 1;
         logo.style.animation = 'slideScrollBottom 1s ease forwards';
 
-        let menuCenter = document.querySelector('.menuList');
+        let menuCenter = document.querySelector('.menuNav');
         menuCenter.style.justifyContent = 'center'; 
        
     }
@@ -58,16 +58,31 @@ window.onscroll = () => {
 
 // FUNÇÃO DE CLICK MENUMOBILE //
 
-window.onload = function(){
-    document.querySelector(".menuMOBILE").addEventListener("click", function(){
-        if(document.querySelector(".menu nav ul").style.display == 'flex') {
-            document.querySelector(".menu nav ul").style.display = 'none';
-        } else {
-            document.querySelector(".menu nav ul").style.display = 'flex';
-        }
-    });
+
+let btnMobile = document.querySelector(".navbar-menu");
+
+
+function toggleMenu(event){
+
+    if(event.type === 'touchstart') event.preventDefault();
+
+    let menuList = document.querySelector('#header .menuList');
+    let menu = document.querySelector('.navbar-menu');
+    menuList.classList.toggle('active');
+    menu.classList.toggle('active');
+
+    const active = menu.classList.contains('active');
+    event.currentTarget.setAttribute('aria-expanded', active);
+
+    if(active) {
+        event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+    } else {
+        event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+    }
 };
 
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
 
 // FUNÇÃO DE CLICK MENU-PRODUTOS //
 
