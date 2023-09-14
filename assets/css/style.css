@@ -39,7 +39,7 @@ body {
 }
 
 .container {
-    width: 80em; 
+    min-width: 80em; 
    
 }
 
@@ -207,11 +207,11 @@ body {
     display: none;
     gap: .5rem;
     
-    position: relative;
     margin: 2em;
     background-color: transparent;
     border: none;
     transition: .5s;
+
 }
 
 #hamburguer {
@@ -264,20 +264,22 @@ body {
 
 @media (min-width:290px) and (max-width:700px) {
 
-     
-    
+          
     .container {
-        min-width: 290px; 
+        min-width: 25em;
+    
         
     }
+    
     .menuList {
         display: block;
         flex-direction: column;
+        right: 0;
         text-align: end;
         transition: 1s;
         background: rgba(208, 243, 247, .8);
         width: 100%;
-        position: fixed;
+        position: absolute;
         top: 65px;
         height: 0;
         overflow-y :hidden;
@@ -334,7 +336,7 @@ body {
     #header .menuLogo, .menuLogo img {
         width: 9em;
         height: 9em;
-        left: 1em;
+        left: 2em;
         z-index: 999;
     }
 
@@ -357,6 +359,7 @@ body {
 .home-area {
     display: flex;
     justify-content: space-between; 
+    
    
 }
 
@@ -533,7 +536,7 @@ body {
     #Home .home-area1-info {
         margin-left: 3em;
         max-width: 17em;
-        min-width: 0;
+        
     }
 
     #Home .home-area1-info h1 {
@@ -573,12 +576,18 @@ body {
 }
 
 @media (min-width:290px) and (max-width:700px) {
+    
+    .home-area {
+        display: block;
+        
+    }
+    
     #Home .home-area1-info {
         max-width: 17em;
         position: absolute;
         top: 22em;
         z-index: 10;
-        left: .5em;
+        left: .2em;
         flex-direction: row;
         
 
@@ -588,7 +597,9 @@ body {
         width: 22em;
         height: 22em;
         top: 1em;
-        left: 7em;
+        left: 5em;
+        position: relative;
+
     }
 
     .home-area2 .home-circulo1 img {
@@ -600,8 +611,10 @@ body {
         width: 27em;
         height: 27em;
         bottom: 22em;
+        
+        right: -.5em;
         border: 18px solid var(--tenth-main);
-        right: -3em ;
+        
     
     }
 
