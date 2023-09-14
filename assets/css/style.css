@@ -204,6 +204,7 @@ body {
 .navbar-menu {
     display: none;
     gap: .5rem;
+    position: fixed;
     
     margin: 2em;
     background-color: transparent;
@@ -308,8 +309,6 @@ body {
 
     .navbar-menu {
         display: flex;
-        position: fixed;
-        right: 0;
         
     }
 
