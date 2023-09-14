@@ -204,7 +204,7 @@ body {
 .navbar-menu {
     display: none;
     gap: .5rem;
-    position: fixed;
+    
     
     margin: 2em;
     background-color: transparent;
@@ -268,7 +268,7 @@ body {
         transition: 1s;
         background: rgba(208, 243, 247, .8);
         width: 100%;
-        position: relative;
+        position:fixed;
         top: 65px;
         height: 0;
         overflow-y :hidden;
