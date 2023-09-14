@@ -31,7 +31,7 @@ html {
 
 body {
     background-color: var(--fifth-main);
-    
+    overflow-x: hidden;
 }
 
 .container-fluid {
@@ -57,7 +57,7 @@ body {
     z-index: 999;
     opacity: 1;
     transition: 1s;
-    
+        
     
 }
 
