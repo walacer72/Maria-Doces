@@ -31,7 +31,7 @@ html {
 
 body {
     background-color: var(--fifth-main);
-    overflow-x: hidden;
+    
 }
 
 .container-fluid {
@@ -207,7 +207,7 @@ body {
     display: none;
     gap: .5rem;
     
-    
+    position: relative;
     margin: 2em;
     background-color: transparent;
     border: none;
@@ -263,8 +263,11 @@ body {
 }
 
 @media (min-width:290px) and (max-width:700px) {
+
+     
+    
     .container {
-        min-width: 330px;    
+        min-width: 290px; 
         
     }
     .menuList {
@@ -274,11 +277,12 @@ body {
         transition: 1s;
         background: rgba(208, 243, 247, .8);
         width: 100%;
-        position:fixed;
+        position: fixed;
         top: 65px;
         height: 0;
         overflow-y :hidden;
         visibility: hidden;
+        overflow-x: hidden;
     }
 
     
@@ -314,7 +318,7 @@ body {
     }
 
     .navbar-menu {
-        display: flex;
+        display: block;
         
     }
 
@@ -584,7 +588,7 @@ body {
         width: 22em;
         height: 22em;
         top: 1em;
-        left: 5em;
+        left: 7em;
     }
 
     .home-area2 .home-circulo1 img {
@@ -597,7 +601,7 @@ body {
         height: 27em;
         bottom: 22em;
         border: 18px solid var(--tenth-main);
-        right: -1em ;
+        right: -3em ;
     
     }
 
@@ -756,6 +760,7 @@ body {
         top: 42em;
         left: -20em;
         border: 2em solid #ecec8d;
+        
     }
 
     
@@ -765,11 +770,12 @@ body {
 
     .ProdutBorder3 {
         
-        min-width: 50em;
-        min-height: 50em;
+        max-width: 50em;
+        max-height: 50em;
         top: 42em;
         left: -25em;
         border: 1.5em solid #ecec8d;
+        overflow-x: hidden;
     }
 
     
