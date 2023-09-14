@@ -25,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -263,7 +264,7 @@ body {
 
 @media (min-width:290px) and (max-width:700px) {
     .container {
-        max-width: 24em; 
+        min-width: 24em; 
       
     }
     .menuList {
