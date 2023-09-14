@@ -25,13 +25,13 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    
 }
 
 
 body {
     background-color: var(--fifth-main);
-    overflow-x: hidden;
+    
 }
 
 .container-fluid {
@@ -264,8 +264,8 @@ body {
 
 @media (min-width:290px) and (max-width:700px) {
     .container {
-        min-width: 18em;    
-      
+        min-width: 330px;    
+        
     }
     .menuList {
         display: block;
@@ -322,6 +322,7 @@ body {
         font-size: 1em;
         padding: 1.2em;
         border-bottom: 1px solid var(--eighth-main);
+        padding-right: 2em;
     }
 
     
@@ -762,8 +763,9 @@ body {
 @media (min-width:290px) and (max-width:700px) {
 
     .ProdutBorder3 {
-        width: 50em;
-        height: 50em;
+        
+        min-width: 50em;
+        min-height: 50em;
         top: 42em;
         left: -25em;
         border: 1.5em solid #ecec8d;
