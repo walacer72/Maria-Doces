@@ -156,6 +156,7 @@ body {
 
 .menuNav {
     display: flex;
+    
     justify-content: end;
     
 }
@@ -261,6 +262,10 @@ body {
 }
 
 @media (min-width:290px) and (max-width:700px) {
+    .container {
+        max-width: 24em; 
+      
+    }
     .menuList {
         display: block;
         flex-direction: column;
@@ -576,7 +581,7 @@ body {
         width: 22em;
         height: 22em;
         top: 1em;
-        left: 11em;
+        left: 5em;
     }
 
     .home-area2 .home-circulo1 img {
@@ -589,7 +594,7 @@ body {
         height: 27em;
         bottom: 22em;
         border: 18px solid var(--tenth-main);
-        right: -7em ;
+        right: -1em ;
     
     }
 
@@ -1561,17 +1566,17 @@ footer .social-icons i .bi.bi.bi.bi-tiktok:hover {
     }
 
     footer .area-footer-endereco {
-        width: 35em;
-        
-    }
-
-    footer .area-footer-contato {
         width: 30em;
         
     }
 
+    footer .area-footer-contato {
+        width: 24em;
+        
+    }
+
     footer .copy h5 {
-       width: 30em;
+       width: 24em;
        text-align: center;
     }
 }
