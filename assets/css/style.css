@@ -269,7 +269,7 @@ body {
 
           
     .container {
-        min-width: 22em;
+        width: 26em;
     
         
     }
@@ -325,6 +325,8 @@ body {
     #header .area-header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        
     }
 
     .navbar-menu {
