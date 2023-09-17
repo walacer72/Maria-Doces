@@ -240,7 +240,7 @@ body {
 
 @media (max-width:900px) {
     .container {
-        max-width: 70em; 
+        width: 60em; 
        
     }
 
@@ -269,7 +269,7 @@ body {
 
           
     .container {
-        width: 23em;
+        width: 100%;
     
         
     }
@@ -341,7 +341,10 @@ body {
         padding-right: 2em;
     }
 
+    
+
     #header .logo-mobile {
+        
         display: flex;
         width: 7.5em;
         margin: 1em;
