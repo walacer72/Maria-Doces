@@ -49,11 +49,9 @@ body {
 #header {
     
     height: 70px;
-    display: flex;
     background-color: var(--first-main);
-    justify-content: center;
-    align-items: center;
     position: fixed;
+    
     box-shadow: 0px 5px 60px #999; 
     border-bottom: .1em solid var(--fifth-main);
     z-index: 999;
@@ -63,7 +61,10 @@ body {
     
 }
 
-
+#header .area-header {
+    
+    margin: auto;
+}
 
 #header .menuLogo {
     width: 225px;
@@ -240,7 +241,7 @@ body {
 
 @media (max-width:900px) {
     .container {
-        width: 60em; 
+        width: auto;
        
     }
 
@@ -269,7 +270,7 @@ body {
 
           
     .container {
-        width: 100%;
+        width: auto;
     
         
     }
@@ -377,7 +378,7 @@ body {
 .home-area {
     display: flex;
     justify-content: space-between; 
-    
+    gap: 3em;
    
 }
 
@@ -504,6 +505,7 @@ body {
 .home-area2 {
     position: relative;
     
+    
 }
 
 .home-area2 .home-circulo1 img {
@@ -545,15 +547,14 @@ body {
 
 @media (max-width:900px) {
     .Home {
-        
         height: calc(40em + 90px);
     }
 
 
     
     #Home .home-area1-info {
-        margin-left: 3em;
-        max-width: 17em;
+        
+        min-width: 50%;
         min-width: 0;
     }
 
@@ -582,7 +583,7 @@ body {
         height: 40em;
         bottom: 32em;
         position: relative;
-        right: 5em;
+        right: 2em;
         
         border: 25px solid var(--tenth-main);
     }
@@ -591,7 +592,7 @@ body {
         width: 35em;
         height: 35em;
         position: relative;
-        left: -1em;
+        left: 3em;
         top: 2em;
     }
 }
