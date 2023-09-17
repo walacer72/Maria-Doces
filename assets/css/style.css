@@ -62,8 +62,9 @@ body {
 }
 
 #header .area-header {
-    
+    height: 70px;
     margin: auto;
+    
 }
 
 #header .menuLogo {
@@ -116,6 +117,7 @@ body {
     
     
 }
+
 
 #header .circulo {
     width: 100%;
@@ -190,7 +192,7 @@ body {
     font-weight: 400;   
     color: var(--seventh-main);
     text-decoration: none;
-    padding: 30px;
+    padding: 25px;
     
     
 }
@@ -259,7 +261,7 @@ body {
 
     .menuNav .nav-link {
         font-size: 1em;
-        padding: 30px 15px;
+        padding: 25px 15px;
         
     }
 
@@ -603,7 +605,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        gap: 0;
     }
     
     #Home .home-area1-info {
@@ -685,7 +687,7 @@ body {
     #Home .home-area1-info {
         max-width: 17em;
         display: flex;
-        gap: 2em;
+        gap: 2em;   
         justify-content: center;
         z-index: 10;
         left: .2em;
