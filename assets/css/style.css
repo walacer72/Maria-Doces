@@ -381,6 +381,7 @@ body {
     display: flex;
     justify-content: space-between; 
     gap: 3em;
+    height: calc(100vh + 70px);
    
 }
 
@@ -599,19 +600,22 @@ body {
     }
 }
 
-@media (min-width:290px) and (max-width:700px) {
+@media (min-width:320px) and (max-width:700px) {
+    .container {
+        width: auto;
+    }
     
     .home-area {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0;
+        height: calc(100vh + 70px);
     }
     
     #Home .home-area1-info {
-        max-width: 17em;
+        width: auto;
         display: flex;
-        gap: 2em;
         justify-content: center;
         z-index: 10;
         flex-direction: row;
@@ -683,17 +687,29 @@ body {
     
 }
 
-@media (min-width:290px) and (max-width:320px) {
+@media (min-width:290px) and (max-width:319px) {
+    .container {
+        width: 100%;
+    }
     #Home .home-area1-info {
-        max-width: 17em;
+        
         display: flex;
-        gap: 2em;   
+        padding: 2.5em;   
         justify-content: center;
         z-index: 10;
-        left: .2em;
+        
         flex-direction: row;
         margin: 0;
 
+    }
+
+    .home-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        gap: 0;
+        height: calc(100vh + 70px);
     }
 
     #Home .home-area2 {
@@ -704,9 +720,9 @@ body {
     }
 
     #Home .home-circulo1 {
-        width: 16em;
-        height: 16em;
-        top: -5em;
+        width: 18em;
+        height: 18em;
+        top: -1em;
         left: 3em;
         position: relative;
         border: 3px solid var(--tenth-main);
@@ -714,18 +730,18 @@ body {
     }
 
     .home-area2 .home-circulo1 img {
-        width: 15em;
-        top: 2.6em;
-        right: .5em;
+        width: 17em;
+        top: 3em;
+        right: 1.5em;
         position: relative;
     }
 
     #Home .home-circulo2 {
-        width: 18em;
-        height: 18em;
-        bottom: 20em;
+        width: 20em;
+        height: 20em;
+        bottom: 18em;
         position: relative;
-        left: 1em;
+        left: .5em;
         border: 10px solid var(--tenth-main);
         
     
@@ -733,8 +749,10 @@ body {
 
     #Home .social-icons {
         flex-direction: column;
-        
         justify-content: end;
+        padding-bottom: 1em;
+        gap: .5em;
+        
     }
 
     #Home .home-area1-info i {
@@ -743,14 +761,15 @@ body {
     }
 
     #Home .home-area1-info h1 {
-        font-size: 2.5em;
+        font-size: 3em;
         padding-top: 2em;
         text-align: center;
+        
     }
 
     #Home .home-area1-info p {
         text-align: center;
-        font-size: .9em;
+        font-size: 1.1em;
         padding: 0;
         margin-bottom: 1em;
     }
