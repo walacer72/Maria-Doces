@@ -14,19 +14,21 @@ function decidirBotaoScroll() {
 
         let menuCenter = document.querySelector('.menuNav');
         menuCenter.style.justifyContent = 'end';
+        
 
     } else {
         
         let menu = document.querySelector('#header');
         menu.style.background = 'rgba(208, 243, 247, .8)';
         
+
         let logo = document.querySelector('#header .menuLogo');
         logo.style.opacity = 1;
         logo.style.animation = 'slideScrollBottom 1s ease forwards';
 
         let menuCenter = document.querySelector('.menuNav');
         menuCenter.style.justifyContent = 'center'; 
-       
+        
     }
 
 }
