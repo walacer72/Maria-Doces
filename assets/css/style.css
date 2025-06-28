@@ -1,31 +1,28 @@
-
-
-
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+
 }
 
 
 :root {
 
-  --first-main: #d6ebed; 
-  --second-main: #aacbf6; 
-  --third-main: #fafa87; 
-  --fourth-main: #e2c3bf; 
-  --fifth-main: #f0e9f1; 
-  --sixth-main: #603628; 
-  --seventh-main: #703d10;
-  --eighth-main: #65b4d9; 
-  --ninth-main: #b9d8d1;
-  --tenth-main: #c3a74b;
+    --first-main: #d6ebed;
+    --second-main: #aacbf6;
+    --third-main: #fafa87;
+    --fourth-main: #e2c3bf;
+    --fifth-main: #f0e9f1;
+    --sixth-main: #603628;
+    --seventh-main: #703d10;
+    --eighth-main: #65b4d9;
+    --ninth-main: #b9d8d1;
+    --tenth-main: #c3a74b;
 }
 
 html {
     scroll-behavior: smooth;
-    
+
 }
 
 
@@ -39,35 +36,35 @@ body {
 }
 
 .container {
-    width: 80em; 
-   
+    width: 80em;
+
 }
 
 
 
 
 #header {
-    
+
     height: 80px;
     background-color: var(--first-main);
     position: fixed;
-    box-shadow: 0px 5px 60px #999; 
+    box-shadow: 0px 5px 60px #999;
     border-bottom: .1em solid var(--fifth-main);
     z-index: 999;
     opacity: 1;
-   
-    
+
+
 }
 
 #header .area-header {
     height: 80px;
     margin: auto;
-    
+
 }
 
 #header .menuLogo {
-    width: 225px;
-    height: 225px;
+    width: 175px;
+    height: 175px;
     position: absolute;
     border-radius: 100%;
     box-shadow: 15px 10px 15px var(--fourth-main);
@@ -78,7 +75,7 @@ body {
     cursor: default;
     opacity: 0;
     animation: slideBottom 1s ease forwards;
-    
+
 }
 
 @keyframes slideBottom {
@@ -86,6 +83,7 @@ body {
         transform: translatey(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translatey(0px);
         opacity: 1;
@@ -97,6 +95,7 @@ body {
         transform: translatey(0px);
         opacity: 1;
     }
+
     100% {
         transform: translatey(-100px);
         opacity: 0;
@@ -104,16 +103,11 @@ body {
 }
 
 
-
-
-
-
-
 .menuLogo img {
-    width: 230px;
-    height: 230px;
-    
-    
+    width: 180px;
+    height: 180px;
+
+
 }
 
 
@@ -125,7 +119,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: ring 2s linear infinite; 
+    animation: ring 2s linear infinite;
 }
 
 
@@ -133,19 +127,21 @@ body {
 
 
 @keyframes ring {
-    0%{
+    0% {
         transform: rotate(0deg);
         box-shadow: 1px 3px 1px #bf828f;
     }
-    50%{
+
+    50% {
         transform: rotate(180deg);
         box-shadow: 1px 3px 1px #14bCaa;
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
         box-shadow: 1px 3px 1px #FEFF86;
     }
-    
+
 }
 
 .circulo:before {
@@ -156,7 +152,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(255,255,255,.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, .3);
 }
 
 .menuNav {
@@ -164,18 +160,18 @@ body {
     height: 100%;
     align-items: center;
     justify-content: end;
-    
 
-    
+
+
 }
 
 
 .menuList {
-    display: flex;  
+    display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
-    
-    
+
+
 }
 
 
@@ -183,25 +179,25 @@ body {
 
 .menuList .nav-item {
     list-style: none;
-        
+
 }
 
 .menuNav .nav-link {
     display: block;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2em;
-    font-weight: 400;   
+    font-weight: 400;
     color: var(--seventh-main);
     text-decoration: none;
     padding: 25px;
-    
-    
+
+
 }
 
 .menuNav .nav-link:hover,
 .menuNav .nav-link.active {
     color: var(--eighth-main);
-    
+
 }
 
 /* MENU SMART */
@@ -213,7 +209,7 @@ body {
 .navbar-menu {
     display: none;
     gap: .5rem;
-    
+
     margin: 2em;
     background-color: transparent;
     border: none;
@@ -226,10 +222,11 @@ body {
     border-top: 2px solid;
     color: #703d10;
     display: block;
-    
+
 }
 
-#hamburguer::before, #hamburguer::after {
+#hamburguer::before,
+#hamburguer::after {
     content: '';
     width: 28px;
     background: currentColor;
@@ -245,7 +242,7 @@ body {
 @media (max-width:900px) {
     .container {
         width: auto;
-       
+
     }
 
     #header .menuLogo {
@@ -257,27 +254,27 @@ body {
     .menuLogo img {
         width: 203px;
         height: 203px;
-        
+
     }
 
     .menuNav .nav-link {
         font-size: 1em;
         padding: 25px 15px;
-        
+
     }
 
-    
+
 }
 
 @media (min-width:290px) and (max-width:700px) {
 
-          
+
     .container {
         width: auto;
-    
-        
+
+
     }
-    
+
     .menuList {
         display: block;
         flex-direction: column;
@@ -289,15 +286,15 @@ body {
         position: absolute;
         top: 80px;
         height: 0;
-        overflow-y :hidden;
+        overflow-y: hidden;
         visibility: hidden;
         overflow-x: hidden;
     }
 
-    
+
 
     .menuList.active {
-        
+
         height: 18.5em;
         visibility: visible;
         overflow-y: hidden;
@@ -308,10 +305,10 @@ body {
         border-top-color: transparent;
     }
 
-    
+
     .navbar-menu.active #hamburguer::before {
         transform: rotate(135deg);
-        
+
     }
 
     .navbar-menu.active #hamburguer::after {
@@ -322,7 +319,7 @@ body {
 
 
     #header {
-        
+
         align-items: center;
     }
 
@@ -330,12 +327,12 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
     }
 
     .navbar-menu {
         display: block;
-        
+
     }
 
     .menuNav .nav-link {
@@ -345,16 +342,17 @@ body {
         padding-right: 2em;
     }
 
-    
+
 
     #header .logo-mobile {
-        
+
         display: flex;
         width: 7.5em;
         margin-left: 1.5em;
     }
 
-    #header .menuLogo, .menuLogo img {
+    #header .menuLogo,
+    .menuLogo img {
         display: none;
         width: 9em;
         height: 9em;
@@ -362,8 +360,8 @@ body {
         z-index: 999;
     }
 
-    
-    
+
+
 }
 
 
@@ -380,34 +378,34 @@ body {
 
 .home-area {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     gap: 3em;
     height: calc(100vh + 80px);
-   
+
 }
 
 
 #Home .home-area1-info {
     display: flex;
-   
-    
+
+
     flex-direction: column;
     min-width: 50%;
     justify-content: center;
     margin: 0;
-    padding-bottom: 3em; 
+    padding-bottom: 3em;
     cursor: default;
-    
+
 }
 
 #Home .home-area1-info h1 {
-    
+
     font-size: 85px;
     color: var(--sixth-main);
-   
+
     padding-bottom: 10px;
     font-weight: normal;
-    font-family: 'Bitthai','Sacramento';
+    font-family: 'Bitthai', 'Sacramento';
 }
 
 #Home .home-area1-info p {
@@ -415,31 +413,31 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: var(--seventh-main);
-    line-height: 1.7em;     
+    line-height: 1.7em;
     width: 30em;
 }
 
 #Home .social-icons {
     margin-top: 1.7em;
-    
+
     display: flex;
 }
 
 #Home .social-icons a {
     text-decoration: none;
-    
+
 }
 
 #Home .home-area1-info i {
-    font-size: 1.2em;   
+    font-size: 1.2em;
     color: var(--sixth-main);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
     margin-right: 0.3em;
-    
-    
+
+
 }
 
 #Home .home-area1-info i .bi.bi-instagram {
@@ -447,7 +445,7 @@ body {
     border-radius: 50%;
     padding: .5em;
     transition: 0.3s;
-    background: linear-gradient(-90deg,var(--first-main),var(--fourth-main));
+    background: linear-gradient(-90deg, var(--first-main), var(--fourth-main));
 }
 
 #Home .home-area1-info i .bi.bi-whatsapp {
@@ -455,7 +453,7 @@ body {
     border-radius: 50%;
     padding: .5em;
     transition: 0.3s;
-    background: linear-gradient(-90deg,var(--first-main),var(--fourth-main));
+    background: linear-gradient(-90deg, var(--first-main), var(--fourth-main));
 }
 
 #Home .home-area1-info i .bi.bi-tiktok {
@@ -463,7 +461,7 @@ body {
     border-radius: 50%;
     padding: .5em;
     transition: 0.3s;
-    background: linear-gradient(-90deg,var(--first-main),var(--fourth-main));
+    background: linear-gradient(-90deg, var(--first-main), var(--fourth-main));
 }
 
 #Home .home-area1-info i .bi.bi-instagram:hover {
@@ -478,7 +476,7 @@ body {
     color: var(--seventh-main);
     transform: scale(1.1);
     background: transparent;
-    
+
 }
 
 #Home .home-area1-info i .bi.bi.bi-tiktok:hover {
@@ -486,21 +484,22 @@ body {
     color: var(--seventh-main);
     transform: scale(1.1);
     background: transparent;
-    
+
 }
 
 
 #Home .home-circulo2 {
     position: relative;
     right: -3em;
-    bottom: 45em;
-    width: 50em;
-    height: 50em;
+    bottom: 40em;
+    width: 45em;
+    height: 45em;
     border-radius: 50%;
+
     border: 30px solid var(--tenth-main);
     z-index: 5;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 25px;
-    opacity: 0;
+    opacity: .2;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
     overflow-y: hidden;
@@ -508,41 +507,44 @@ body {
 
 .home-area2 {
     position: relative;
-    
-    
+
+
 }
 
 .home-area2 .home-circulo1 img {
-    width: 40em;
+    width: 32em;
     position: relative;
-    top: 7.1em;
+    left: 1em;
+    top: 10.1em;
     z-index: 0;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    
+
 }
 
 #Home .home-circulo1 {
-    
-    
+
+
     left: 8em;
-    width: 45em;    
-    height: 45em;
+    width: 40em;
+    height: 40em;
     border-radius: 50%;
+    opacity: .2;
     border: 5px solid var(--tenth-main);
     position: relative;
     background-color: var(--first-main);
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 3s;
-    
-} 
+
+}
 
 @keyframes slideLeft {
     0% {
-        transform: translatex(100px);   
+        transform: translatex(100px);
         opacity: 0;
     }
+
     100% {
         transform: translatex(0px);
         opacity: 1;
@@ -555,9 +557,9 @@ body {
     }
 
 
-    
+
     #Home .home-area1-info {
-        
+
         min-width: 50%;
         min-width: 0;
     }
@@ -573,23 +575,25 @@ body {
 
     .home-area2 .home-circulo1 img {
         width: 32em;
-        top: 7em;   
+        top: 7em;
+        left: 0;
     }
 
     #Home .home-area2 {
         max-width: 27em;
-    
+
     }
+
     #Home .home-circulo2 {
         width: 40em;
         height: 40em;
         bottom: 32em;
         position: relative;
         right: 2em;
-        
+
         border: 25px solid var(--tenth-main);
     }
-    
+
     #Home .home-circulo1 {
         width: 35em;
         height: 35em;
@@ -603,7 +607,7 @@ body {
     .container {
         width: auto;
     }
-    
+
     .home-area {
         display: flex;
         flex-direction: column;
@@ -611,7 +615,7 @@ body {
         gap: 0;
         height: calc(100vh + 80px);
     }
-    
+
     #Home .home-area1-info {
         width: auto;
         display: flex;
@@ -619,14 +623,14 @@ body {
         z-index: 10;
         flex-direction: row;
         margin: 0;
-        
+
 
     }
 
     #Home .home-area2 {
         margin-top: 2em;
         position: static;
-        align-items: center ;
+        align-items: center;
         gap: 1em;
     }
 
@@ -643,7 +647,8 @@ body {
     .home-area2 .home-circulo1 img {
         width: 20em;
         top: 5.5em;
-        right: 1em;
+        right: 2em;
+        left: 0;
         position: relative;
     }
 
@@ -652,15 +657,15 @@ body {
         height: 24em;
         bottom: 22em;
         position: relative;
-        left: .5em;    
+        left: .5em;
         border: 15px solid var(--tenth-main);
-        
-    
+
+
     }
 
     #Home .social-icons {
         flex-direction: column;
-        
+
         justify-content: end;
     }
 
@@ -671,7 +676,7 @@ body {
 
     #Home .home-area1-info h1 {
         font-size: 3.5em;
-        
+
         padding-top: 2em;
         text-align: center;
     }
@@ -680,23 +685,24 @@ body {
         text-align: center;
         font-size: 1.2em;
         padding: 0;
-        
+
     }
 
-    
+
 }
 
 @media (min-width:290px) and (max-width:319px) {
     .container {
         width: 100%;
     }
+
     #Home .home-area1-info {
-        
+
         display: flex;
-        padding: 2.5em;   
+        padding: 2.5em;
         justify-content: center;
         z-index: 10;
-        
+
         flex-direction: row;
         margin: 0;
 
@@ -706,7 +712,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+
         gap: 0;
         height: calc(100vh + 80px);
     }
@@ -714,7 +720,7 @@ body {
     #Home .home-area2 {
         margin: 1em;
         position: static;
-        align-items: center ;
+        align-items: center;
         gap: 1em;
     }
 
@@ -742,8 +748,8 @@ body {
         position: relative;
         left: .5em;
         border: 10px solid var(--tenth-main);
-        
-    
+
+
     }
 
     #Home .social-icons {
@@ -751,7 +757,7 @@ body {
         justify-content: end;
         padding-bottom: 1em;
         gap: .5em;
-        
+
     }
 
     #Home .home-area1-info i {
@@ -763,7 +769,7 @@ body {
         font-size: 3em;
         padding-top: 2em;
         text-align: center;
-        
+
     }
 
     #Home .home-area1-info p {
@@ -780,15 +786,16 @@ body {
 .SobreNos {
     display: flex;
     justify-content: center;
-    
+
     padding: 2em;
-   
-    
+
+
 }
+
 .SobreNos .area-SobreNos {
     display: flex;
     justify-content: space-between;
-    gap: 5em;   
+    gap: 5em;
 }
 
 .SobreNos .border-SobreNos {
@@ -796,8 +803,8 @@ body {
     z-index: 5;
     margin-top: 8em;
     margin-bottom: 3em;
-    width: 35em;
-    height: 35em;
+    width: 30em;
+    height: 30em;
     border-radius: 50%;
     border: 15px solid #dede81;
     box-shadow: 0px 0px 40px var(--tenth-main);
@@ -805,30 +812,30 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
+
 }
 
 .SobreNos .border-SobreNos img {
-    width: 35em;
-    
+    width: 30em;
+
 }
 
 .SobreNos .info-SobreNos {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     justify-content: center;
     z-index: 5;
-    
+
 }
 
 .SobreNos .info-SobreNos h1 {
     font-size: 55px;
     color: var(--sixth-main);
-    
+
     padding-bottom: 0.5em;
-    font-family: 'Bitthai','Sacramento';
+    font-family: 'Bitthai', 'Sacramento';
     font-weight: 500;
-    
+
 
 }
 
@@ -839,8 +846,8 @@ body {
     color: var(--seventh-main);
     line-height: 1.7em;
     flex-wrap: wrap;
-    
-    
+
+
 }
 
 
@@ -848,11 +855,11 @@ body {
 
 .ProdutBorder3 {
 
-    width: 80em;
-    height: 80em;
+    width: 70em;
+    height: 70em;
     border-radius: 50%;
     border: 2.5em solid #ecec8d;
-    
+    opacity: .2;
     position: absolute;
     top: 42em;
     left: -30em;
@@ -860,18 +867,22 @@ body {
     animation-delay: 4s;
     z-index: 1;
 }
+
 .ProdutBorder3 .ProdutBorder4 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     border: 8px solid #dede81;
-    
+    opacity: .2;
+
 }
+
 @keyframes slideRight {
     0% {
-        transform: translatex(-400px);   
+        transform: translatex(-400px);
         opacity: 0;
     }
+
     100% {
         transform: translatex(0px);
         opacity: 1;
@@ -905,16 +916,16 @@ body {
         top: 42em;
         left: -20em;
         border: 2em solid #ecec8d;
-        
+
     }
 
-    
+
 }
 
 @media (min-width:290px) and (max-width:700px) {
 
     .ProdutBorder3 {
-        
+
         max-width: 50em;
         max-height: 50em;
         top: 48em;
@@ -927,7 +938,8 @@ body {
         margin-top: 6em;
     }
 
-    .SobreNos .border-SobreNos, .border-SobreNos img {
+    .SobreNos .border-SobreNos,
+    .border-SobreNos img {
         width: 20em;
         height: 20em;
         border: 10px solid #dede81;
@@ -948,8 +960,8 @@ body {
 
 .Produtos {
 
-    
-    margin-top: 2.5em;
+
+    margin-top: 1em;
     background: rgba(222, 235, 232, .3);
     display: flex;
     flex-direction: column;
@@ -960,29 +972,32 @@ body {
 
 #Produtos .area-name-Produtos {
     display: flex;
-    flex-direction: column;
-    
+    justify-content: center;
+    gap: .7em;
+    margin-top: 7.5em;
 }
+
 #Produtos h1 {
     display: flex;
     justify-content: center;
-    font-size: 6em; 
+    font-size: 3.7em;
     color: var(--sixth-main);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    margin-top: 2.5em; 
-
+    align-items: center;
+    z-index: 99;
 }
 
- 
+
 
 #Produtos h3 {
-    display: flex;
-    justify-content: center;
-    font-size: 4.5em;
+
+    font-size: 3em;
+    align-items: center;
     color: var(--seventh-main);
-    font-family: 'Bitthai','Sacramento';
+    font-family: 'Bitthai', 'Sacramento';
     font-weight: 400;
+    margin-top: .2em;
 
 }
 
@@ -991,22 +1006,21 @@ body {
     display: flex;
     justify-content: center;
     list-style: none;
-    
     margin-top: 2em;
-    
+
 }
 
 .Produtos .barraProdutos li {
     font-family: 'Montserrat', sans-serif;
-    margin: 3em;
-    padding: 2em;
-    font-size: .9em;
+    margin: 1em;
+
+    font-size: .7em;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
-    width: 8em;
-    height: 8em;
+    z-index: 99;
+    width: 7em;
+    height: 7em;
     border-radius: 50%;
     border: .3em solid transparent;
     cursor: pointer;
@@ -1015,8 +1029,8 @@ body {
 }
 
 .Produtos .barraProdutos li:hover {
-    width: 8em;
-    height: 8em;
+    width: 7em;
+    height: 7em;
     border: .3em solid var(--eighth-main);
     border-radius: 50%;
     z-index: 2;
@@ -1040,29 +1054,28 @@ body {
 .Produto-area-img {
     display: flex;
     justify-content: center;
-    
     margin-top: 2em;
-    padding-bottom: 40px;
-    
+    margin-bottom: .5em;
+
 }
 
 
 .Produto-area {
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 3.5em 2em;
     justify-content: center;
     padding: 0;
-     
+
 }
 
 
-.Produtos .Produto-area li {
+.Produto-area .produto-item {
     display: none;
-       
     list-style: none;
-    width: 20em;
-    height: auto;  
+    width: 12.5em;
+    height: auto;
+    z-index: 99;
     border-radius: 10px;
     box-shadow: 0 0 1.5rem var(--eighth-main);
     overflow: hidden;
@@ -1070,41 +1083,79 @@ body {
     animation: animationImg 1s ease-in-out forwards;
 }
 
+.Produto-area .produto-item:nth-child(-n+4) {
+    display: block;
+}
+
+.Produto-area.mostrar-tudo .produto-item {
+    display: block;
+}
+
+.ver-mais-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+#verMaisBtn {
+    margin-top: 1em;
+    padding: .7em;
+    width: 15em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    display: block;
+    border: .1em solid var(--eighth-main);
+    border-radius: .5em;
+    color: var(--eighth-main);
+    transition: 0.3s;
+    background: linear-gradient(-90deg, var(--ninth-main), var(--fifth-main));
+}
+
+#verMaisBtn:hover {
+    background: transparent;
+    background-color: var(--eighth-main);
+    color: #fff;
+    transform: scale(1.02);
+}
+
 @keyframes animationImg {
     0% {
         opacity: 0;
         transform: translate3d(0, -30px, 0);
     }
+
     100% {
         opacity: 1;
         transform: translate3d(0, 0, 0);
     }
 }
 
-.Produtos .Produto-area li img, video {
+.Produtos .Produto-area li img,
+video {
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     transition: transform 0.4s;
-    
-} 
 
-
-.Produtos .Produto-area li:hover img {
-    transform: scale(1.15);
-            
 }
 
-.Produtos .Produto-area li:hover {
+
+.Produtos .Produto-area .produto-item:hover img {
+    transform: scale(1.15);
+
+}
+
+.Produtos .Produto-area .produto-item:hover {
     border: 3px solid var(--eighth-main);
     border-radius: 10px;
-} 
+}
 
 
 
-.Produtos .Produto-area li.active {
+.Produtos .Produto-area .produto-item.active {
     display: block;
 }
 
@@ -1114,17 +1165,17 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--third-main);
-    margin-top: 5em;        
-    
+    margin-top: 5em;
+
 }
 
 
 #Produtos .info-outrosprodutos h1 {
     width: 500px;
-    font-family: 'Bitthai','Sacramento';
+    font-family: 'Bitthai', 'Sacramento';
     font-weight: 400;
     font-size: 6em;
-    
+
 }
 
 
@@ -1138,17 +1189,17 @@ body {
 
 
 .img-grid1 {
-    
+
     background-image: url('../images/grid/pave-1.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
     height: 18em;
-    
+
 }
 
 .img-grid2 {
-    
+
     background-image: url('../images/grid/pave-2.jpg');
     background-size: cover;
     background-position: center;
@@ -1157,7 +1208,7 @@ body {
 }
 
 .img-grid3 {
-    
+
     background-image: url('../images/grid/pave-3.jpg');
     background-size: cover;
     background-position: center;
@@ -1176,10 +1227,10 @@ body {
     }
 
     .Produtos .barraProdutos li {
-        
+
         margin: 1.2em;
         padding: 2em;
-        font-size: 0.7em; 
+        font-size: 0.7em;
     }
 
     .Produto-area {
@@ -1191,36 +1242,64 @@ body {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-    .img-grid1, .img-grid2, .img-grid3 {
+
+    .img-grid1,
+    .img-grid2,
+    .img-grid3 {
         height: 28em;
+    }
+
+    #verMaisBtn {
+        margin-top: .3em;
     }
 
 }
 
 @media (min-width:290px) and (max-width:700px) {
+    #Produtos .area-name-Produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        margin-top: 7.5em;
+    }
+
+    .Produtos .barraProdutos {
+
+        margin-top: 1em;
+
+    }
+
     #Produtos h1 {
-        font-size: 3em;
+        font-size: 2.5em;
+        padding: 0;
     }
 
     #Produtos h3 {
-        font-size: 3em;
+        font-size: 2.5em;
+        padding: 0;
+        margin-top: -.5em;
     }
 
     .Produto-area {
-        gap: 1em 1em;
+        gap: 1em;
     }
 
     .Produtos .barraProdutos li {
-        
-        margin: .5em;
+
+        margin: .4em;
         padding: 0;
-        font-size: .6em; 
+        font-size: .6em;
     }
 
     .Produtos .Produto-area li {
         width: 10em;
     }
-    .img-grid1, .img-grid2, .img-grid3 {
+
+    .img-grid1,
+    .img-grid2,
+    .img-grid3 {
         height: 15em;
     }
 }
@@ -1234,19 +1313,20 @@ body {
     margin-top: 5em;
     margin-bottom: 5em;
     padding: 5em;
-    
+
 }
 
 .KitFesta .area-kitFesta-titulo {
     text-align: center;
-    
+
 }
 
 .KitFesta .area-kitFesta {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    width: 70%;
     justify-content: center;
-    
+
     gap: 1em;
 
 }
@@ -1255,7 +1335,7 @@ body {
 
 .KitFesta li {
     list-style: none;
-    padding: 10px ;
+    padding: 10px;
     color: var(--sixth-main);
     font-size: 1em;
     font-family: 'Montserrat', sans-serif;
@@ -1272,24 +1352,25 @@ body {
     color: var(--sixth-main);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 6em;
+    font-size: 4.5em;
     margin-top: .4em;
-    
+    margin-top: 0.7em;
 }
 
 .KitFesta h3 {
     color: var(--seventh-main);
-    font-family: 'Bitthai','Sacramento';
-    font-weight: 400;  
-    font-size: 2.5em;
+    font-family: 'Bitthai', 'Sacramento';
+    font-weight: 400;
+    font-size: 2em;
     text-align: center;
 }
 
 .KitFesta p {
-    font-size: 4.5em;
+    font-size: 3em;
+    margin-bottom: .7em;
     color: var(--seventh-main);
-    font-family: 'Bitthai','Sacramento';
-    font-weight: 400;   
+    font-family: 'Bitthai', 'Sacramento';
+    font-weight: 400;
 }
 
 .KitFesta a {
@@ -1298,7 +1379,7 @@ body {
     margin-top: 1em;
     border: .1em solid var(--eighth-main);
     background: transparent;
-    padding: .6em;   
+    padding: .4em;
     border-radius: .5em;
     color: var(--eighth-main);
     font-family: 'Montserrat', sans-serif;
@@ -1311,22 +1392,22 @@ body {
 .KitFesta a:hover {
     background-color: var(--eighth-main);
     color: #fff;
-      
+
 }
 
 .KitFesta .kits {
-   
-    
+
+
     border: 1px solid var(--eighth-main);
-    padding: 2.5em 3.5em;
+    padding: 1em;
     border-radius: 5px;
-    background: linear-gradient(var(--first-main),var(--fifth-main));
+    background: linear-gradient(var(--first-main), var(--fifth-main));
     transition: 0.3s;
-    
+
 }
 
 .KitFesta .kits:hover {
-    box-shadow: 0em 0em 3em var(--second-main);  
+    box-shadow: 0em 0em 3em var(--second-main);
     transform: scale(1.05);
     transition: 0.3s;
 }
@@ -1345,7 +1426,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
-        
+
 
 
 }
@@ -1355,6 +1436,7 @@ body {
     .KitFesta .area-kitFesta {
         gap: .9em;
     }
+
     .KitFesta h1 {
         font-size: 4em;
     }
@@ -1364,23 +1446,23 @@ body {
     }
 
     .KitFesta .kits {
-   
+
         padding: .7em 1.2em;
-        
+
     }
 
     .KitFesta .kits h3 {
-   
+
         font-size: 1.5em;
-        
+
     }
 
     .KitFesta .kits ul li {
-   
+
         font-size: .8em;
         min-width: 10em;
-        
-        
+
+
     }
 }
 
@@ -1400,14 +1482,14 @@ body {
     flex-direction: column;
     text-align: center;
     padding: 2em;
-}   
+}
 
 .contato h1 {
     color: var(--sixth-main);
     font-weight: 400;
-    font-size: 8em;
-    font-family: 'Bitthai','Sacramento';
-    margin-bottom: .5em;    
+    font-size: 6em;
+    font-family: 'Bitthai', 'Sacramento';
+    margin-bottom: .4em;
     margin-top: .8em;
 }
 
@@ -1428,12 +1510,13 @@ body {
 .contato .formValidator .form-column {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.contato .formValidator .form-column input, .form-column textarea { 
+.contato .formValidator .form-column input,
+.form-column textarea {
     margin-bottom: 1em;
-    
+
     padding: 1em;
     border: none;
     background: transparent;
@@ -1451,8 +1534,9 @@ body {
     resize: none;
 }
 
-.contato .formValidator input::placeholder, textarea::placeholder {
-    color: var(--sixth-main);   
+.contato .formValidator input::placeholder,
+textarea::placeholder {
+    color: var(--sixth-main);
 }
 
 .contato .button {
@@ -1465,8 +1549,8 @@ body {
     border: .1em solid var(--eighth-main);
     border-radius: .5em;
     color: var(--eighth-main);
-    transition: 0.3s; 
-    background: linear-gradient(-90deg,var(--ninth-main),var(--fifth-main));  
+    transition: 0.3s;
+    background: linear-gradient(-90deg, var(--ninth-main), var(--fifth-main));
 
 }
 
@@ -1479,8 +1563,8 @@ body {
 
 .contato .error {
     font-size: 14px;
-    color: #ff0000; 
-    width: 100%;    
+    color: #ff0000;
+    width: 100%;
     padding: 0;
 }
 
@@ -1489,7 +1573,7 @@ body {
         flex-direction: column;
         gap: 0;
     }
-    
+
 
     .contato h1 {
         font-size: 6em;
@@ -1497,11 +1581,13 @@ body {
         margin-bottom: 0;
     }
 
-    .contato .formValidator input::placeholder, textArea::placeholder {
+    .contato .formValidator input::placeholder,
+    textArea::placeholder {
         font-size: .9em;
     }
 
-    .contato .formValidator .form-column input, .form-column textarea {
+    .contato .formValidator .form-column input,
+    .form-column textarea {
         padding: 1em;
         overflow-y: hidden;
     }
@@ -1521,8 +1607,8 @@ footer {
     border-top: 1px solid var(--eighth-main);
     padding: 1em;
     display: flex;
-    justify-content: center;    
-    
+    justify-content: center;
+
 }
 
 footer .column {
@@ -1533,7 +1619,7 @@ footer .column {
 
 footer .area-footer {
     display: flex;
-    
+
     justify-content: space-around;
     padding: 1em;
 }
@@ -1553,7 +1639,7 @@ footer .area-footer-endereco li {
     list-style: none;
     font-size: 1.1em;
     font-family: 'Montserrat', sans-serif;
-    color: var(--sixth-main);   
+    color: var(--sixth-main);
 }
 
 
@@ -1562,11 +1648,11 @@ footer h1 {
     display: flex;
     margin-bottom: 2em;
     justify-content: center;
-    
+
     font-size: 1.3em;
     font-family: 'Montserrat', sans-serif;
     color: var(--sixth-main);
-    
+
 }
 
 footer .area-footer-contato {
@@ -1581,7 +1667,7 @@ footer .area-footer-contato li {
     font-size: 1.1em;
     font-family: 'Montserrat', sans-serif;
     color: var(--sixth-main);
-    
+
 }
 
 footer .social-icons {
@@ -1600,6 +1686,7 @@ footer .area-icons {
     display: flex;
     justify-content: space-around;
 }
+
 footer .copy {
     display: flex;
     justify-content: space-between;
@@ -1612,12 +1699,12 @@ footer .copy h5 {
     font-family: 'Montserrat', sans-serif;
     padding: .7em;
     font-weight: 400;
-    
+
 }
 
-footer .copy h5 i.bi.bi-heart{
+footer .copy h5 i.bi.bi-heart {
     color: #f00;
-    
+
 }
 
 footer .social-icons i {
@@ -1630,13 +1717,14 @@ footer .social-icons i {
 }
 
 footer .social-icons a {
-    text-decoration: none;  
-    
+    text-decoration: none;
+
 }
 
 footer .social-icons i .bi.bi-instagram,
-i .bi.bi-whatsapp, i .bi.bi-tiktok {
-    
+i .bi.bi-whatsapp,
+i .bi.bi-tiktok {
+
     border-radius: 50%;
     padding: .6em;
     transition: 0.3s;
@@ -1647,18 +1735,18 @@ i .bi.bi-whatsapp, i .bi.bi-tiktok {
 
 
 footer .social-icons i .bi.bi-instagram:hover {
-    
+
     color: #fff;
     transform: scale(1.2);
     background: var(--eighth-main);
 }
 
 footer .social-icons i .bi.bi-whatsapp:hover {
-   
+
     color: #fff;
     transform: scale(1.2);
     background: var(--eighth-main);
-    
+
 }
 
 footer .social-icons i .bi.bi.bi.bi-tiktok:hover {
@@ -1668,8 +1756,8 @@ footer .social-icons i .bi.bi.bi.bi-tiktok:hover {
 }
 
 @media (max-width:900px) {
-    
-    
+
+
     footer .social-icons {
         width: 40em;
         justify-content: space-between;
@@ -1689,11 +1777,13 @@ footer .social-icons i .bi.bi.bi.bi-tiktok:hover {
         padding: 2em;
     }
 
-    footer .area-footer-endereco .start, .area-footer-contato .start {
+    footer .area-footer-endereco .start,
+    .area-footer-contato .start {
         text-align: start;
     }
 
-    footer .area-footer-endereco .end, .area-footer-contato .end {
+    footer .area-footer-endereco .end,
+    .area-footer-contato .end {
         text-align: end;
     }
 
@@ -1720,21 +1810,21 @@ footer .social-icons i .bi.bi.bi.bi-tiktok:hover {
     footer .social-icons {
         width: 30em;
         justify-content: space-between;
-       
+
     }
 
     footer .area-footer-endereco {
         width: 30em;
-        
+
     }
 
     footer .area-footer-contato {
         width: 24em;
-        
+
     }
 
     footer .copy h5 {
-       width: 24em;
-       text-align: center;
+        width: 24em;
+        text-align: center;
     }
 }

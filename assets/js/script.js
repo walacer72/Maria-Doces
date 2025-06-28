@@ -2,35 +2,16 @@
 // ESTILIZAÇÃO DA PAGINA AO MOVIMENTAR O SCROLL //
 
 function decidirBotaoScroll() {
+    const header = document.querySelector('#header');
+    const logo = header.querySelector('.menuLogo');
+    const menuCenter = header.querySelector('.menuNav');
 
-    if (window.scrollY === 0) {
-        let menu = document.querySelector('#header');
-        menu.style.backgroundColor = '#d6ebed'; 
-        
+    const noScroll = window.scrollY === 0;
 
-        let logo = document.querySelector('#header .menuLogo');
-        logo.style.opacity = 0;
-        logo.style.animation = 'slideBottom 1s ease forwards';
-
-        let menuCenter = document.querySelector('.menuNav');
-        menuCenter.style.justifyContent = 'end';
-        
-
-    } else {
-        
-        let menu = document.querySelector('#header');
-        menu.style.background = 'rgba(208, 243, 247, .8)';
-        
-
-        let logo = document.querySelector('#header .menuLogo');
-        logo.style.opacity = 1;
-        logo.style.animation = 'slideScrollBottom 1s ease forwards';
-
-        let menuCenter = document.querySelector('.menuNav');
-        menuCenter.style.justifyContent = 'center'; 
-        
-    }
-
+    header.style.backgroundColor = noScroll ? '#d6ebed' : 'rgba(208, 243, 247, .8)';
+    logo.style.opacity = noScroll ? 0 : 1;
+    logo.style.animation = noScroll ? 'slideBottom 1s ease forwards' : 'slideScrollBottom 1s ease forwards';
+    menuCenter.style.justifyContent = noScroll ? 'end' : 'center';
 }
 
 window.addEventListener('scroll', decidirBotaoScroll);
@@ -47,10 +28,10 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                document.querySelector('header nav a[href*=' + id + ']')?.classList.add('active');
             });
         };
 
@@ -61,212 +42,148 @@ window.onscroll = () => {
 
 
 let btnMobile = document.querySelector(".navbar-menu");
+let menuList = document.querySelector('#header .menuList');
+let menu = document.querySelector('.navbar-menu');
+
+function toggleMenu(event) {
+
+    if (event.type === 'touchstart') event.preventDefault();
 
 
-function toggleMenu(event){
-
-    if(event.type === 'touchstart') event.preventDefault();
-
-    let menuList = document.querySelector('#header .menuList');
-    let menu = document.querySelector('.navbar-menu');
     menuList.classList.toggle('active');
     menu.classList.toggle('active');
 
     const active = menu.classList.contains('active');
     event.currentTarget.setAttribute('aria-expanded', active);
-
-    if(active) {
-        event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
-    } else {
-        event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
-    }
+    event.currentTarget.setAttribute('aria-label', active ? 'Fechar Menu' : 'Abrir Menu');
 };
 
 btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
 
+
+
 // FUNÇÃO DE CLICK MENU-PRODUTOS //
 
-const listProdutos = document.querySelectorAll('.Produtos .Produto-area li');
-const buttonGeralProdutos = document.querySelectorAll('.Produtos .barraProdutos li');
+const produtos = document.querySelectorAll('.Produto-area li');
+const botoesFiltro = document.querySelectorAll('.barraProdutos li');
+const verMaisBtn = document.getElementById('verMaisBtn');
+const listaProdutos = document.querySelector('.Produto-area');
 
-
-function removeClick(index) {   
-    buttonGeralProdutos.forEach((item)=>{
-        item.classList.remove('active');
-    })
-    buttonGeralProdutos[index].classList.add('active');
+// Função para remover classe ativa dos botões e adicionar no clicado
+function ativarBotaoAtivo(botaoClicado) {
+    botoesFiltro.forEach(btn => btn.classList.remove('active'));
+    botaoClicado.classList.add('active');
 }
 
-buttonGeralProdutos.forEach((item, index)=>{
-    item.addEventListener('click', ()=>{
-        removeClick(index);
-    })
-});
+// Função para mostrar somente os itens da categoria selecionada
+function filtrarProdutos(categoria) {
+    const listaProdutos = document.querySelector('.Produto-area');
+    listaProdutos.classList.remove('mostrar-tudo'); // Sempre começa colapsado
+    verMaisBtn.textContent = 'Ver mais'; // Resetar texto do botão
 
-// FUNÇÃO DE CLICK APARECER IMAGENS //
+    let count = 0;
 
-function showList(lista, button = "b1") {
-    
+    produtos.forEach(produto => {
+        const tipo = produto.dataset.produto;
+        
+        if (tipo === categoria) {
+            count++;
 
-    lista.forEach((item)=>{
-        item.classList.remove('active');
-    })
-    if (button == 'b1') {
-    
-        for (let i = 0; i < 21; i++) {
-            lista[i].classList.add('active');
+            // Mostra os 6 primeiros, esconde o resto
+            if (count <= 4) {
+                produto.style.display = 'block';
+            } else {
+                produto.style.display = 'none';
+            }
+        } else {
+            produto.style.display = 'none';
         }
-
-    }
-    if (button == 'b2') {
-
-        for (let i = 21; i < 28; i++) {
-            lista[i].classList.add('active');
-        }
-    }
-    if (button == 'b3') {
-
-        for (let i = 28; i < 30; i++) {
-            lista[i].classList.add('active');
-        }
-    }
-    if (button == 'b4') {
-
-        for (let i = 30; i < 33; i++) {
-            lista[i].classList.add('active');
-        }
-    }
+    });
 }
 
-showList(listProdutos, "b1");
 
-buttonGeralProdutos.forEach((item)=>{
-    item.addEventListener('click', (e)=>{
-        let currentButton = e.target;
-        if (currentButton.classList.contains('b1')) {
-            showList(listProdutos, "b1");
-        }
-        if (currentButton.classList.contains('b2')) {
-            showList(listProdutos, "b2");
-        }
-        if (currentButton.classList.contains('b3')) {
-            showList(listProdutos, "b3");
-        }
-        if (currentButton.classList.contains('b4')) {
-            showList(listProdutos, "b4");
-        }
-       
+// Evento de clique nos botões
+botoesFiltro.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const categoria = botao.dataset.filter;
+        ativarBotaoAtivo(botao);
+        filtrarProdutos(categoria);
     });
 });
 
-;
+// Mostrar a categoria inicial (bolos)
+filtrarProdutos('bolos');
 
-/*
-showListContato(listProdutos, "b1");
+verMaisBtn.addEventListener('click', () => {
+    const categoriaAtual = document.querySelector('.barraProdutos li.active').dataset.filter;
 
+    const produtosCategoria = Array.from(produtos).filter(p => p.dataset.produto === categoriaAtual);
 
-// DIRECIONAMENTO ORÇAMENTO-CONTATO //
+    const estaMostrandoTudo = listaProdutos.classList.toggle('mostrar-tudo');
 
-let buttonContato = document.querySelectorAll('#Kitfesta .orcamento');
-
-
-function showListContato(button = 'c1') {
-    
-    if (button == 'c1') {
-       
-        document.querySelector('textarea')[0].placeholder.textContent = 'Oi tudo bem? Gostaria de saber os valor e mais informações sobre o kit 1';
-        
-        
-        
-    }
-    if (button == 'c2') {
-
-        
-    }
-    if (button == 'c3') {
-
-
-    }
-    if (button == 'c4') {
-
-        
-    }
-}
-
-buttonContato.forEach((item)=>{
-    item.addEventListener('click', (e)=>{
-        let currentButton = e.target;
-        if (currentButton.classList.contains('c1')) {
-            showListContato(listProdutos, "c1");
+    produtosCategoria.forEach((produto, index) => {
+        if (estaMostrandoTudo) {
+            produto.style.display = 'block'; // Mostra todos
+        } else {
+            produto.style.display = index < 3 ? 'block' : 'none'; // Mostra só os 6 primeiros
         }
-        if (currentButton.classList.contains('c2')) {
-            showListContato(listProdutos, "c2");
-        }
-        if (currentButton.classList.contains('c3')) {
-            showListContato(listProdutos, "c3");
-        }
-        if (currentButton.classList.contains('c4')) {
-            showListContato(listProdutos, "c4");
-        }
-       
     });
+
+    verMaisBtn.textContent = estaMostrandoTudo ? 'Ver menos' : 'Ver mais';
 });
-*/
 
-
-// VALIDADOR DO FORMULARIO //
 
 let contatoformValidator = {
-    verifEnvio:(event)=>{
+    verifEnvio: (event) => {
         event.preventDefault();
-    
+
         let send = true;
 
         let inputs = form.querySelectorAll('input, textarea');
-        
+
         contatoformValidator.clearError();
 
-        for(let i = 0; i < inputs.length; i++) {
+        for (let i = 0; i < inputs.length; i++) {
             let input = inputs[i];
             let check = contatoformValidator.checkInput(input);
-            if(check !== true) {
+            if (check !== true) {
                 send = false;
                 contatoformValidator.showError(input, check);
-            } 
+            }
         }
-        
-        if(send) {
-            form.submit();      
+
+        if (send) {
+            form.submit();
         }
     },
 
-    checkInput:(input) => {
+    checkInput: (input) => {
         let rules = input.getAttribute('data-rules');
-        if(rules !== null) {
+        if (rules !== null) {
             rules = rules.split('|');
             for (let i in rules) {
                 let rDetails = rules[i].split('=');
-                switch(rDetails[0]) {
+                switch (rDetails[0]) {
                     case 'required':
                         if (input.value == '') {
                             return 'Campo obrigatorio!';
                         }
 
-                    break;
+                        break;
                     case 'min':
                         if (input.value.length < rDetails[1]) {
-                            return 'Campo minimo de '+rDetails[1]+' caracteres!';
+                            return 'Campo minimo de ' + rDetails[1] + ' caracteres!';
                         }
 
-                    break;
+                        break;
                 }
             }
         }
         return true;
     },
 
-    showError:(input, error)=>{
+    showError: (input, error) => {
         input.style.borderColor = '#ff0000';
 
         let errorElement = document.createElement('div');
@@ -274,19 +191,19 @@ let contatoformValidator = {
         errorElement.innerHTML = error;
 
         input.parentElement.insertBefore(errorElement, input.ElementSibling);
-    
+
     },
-   
-    clearError:()=>{
+
+    clearError: () => {
         let errorElements = document.querySelectorAll('.error');
         let inputs = form.querySelectorAll('input');
 
-        for (let i=0; i <inputs.length;i++) {
+        for (let i = 0; i < inputs.length; i++) {
             inputs[i].style.borderColor = '';
         }
 
-        for(let i = 0; i < errorElements.length; i++) {
-            errorElements[i].remove();    
+        for (let i = 0; i < errorElements.length; i++) {
+            errorElements[i].remove();
         }
     }
 
@@ -297,21 +214,21 @@ let contatoformValidator = {
 
 let form = document.querySelector('.formValidator');
 
-form.addEventListener('submit',contatoformValidator.verifEnvio);
+form.addEventListener('submit', contatoformValidator.verifEnvio);
 
 let inputs = form.querySelectorAll('input, textarea');
 
 
 
 inputs.forEach((item) => {
-    item.addEventListener('click', (e)=>{
+    item.addEventListener('click', (e) => {
         let currentInput = e.target;
 
-        if (currentInput.value !== '') { 
+        if (currentInput.value !== '') {
             currentInput.style.borderColor = '#65b4d9';
         }
-               
-                
+
+
     })
 });
 
