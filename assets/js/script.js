@@ -134,6 +134,8 @@ verMaisBtn.addEventListener('click', () => {
 });
 
 
+// FORMULARIO DE ENVIO
+
 let contatoformValidator = {
     verifEnvio: (event) => {
         event.preventDefault();
@@ -141,7 +143,7 @@ let contatoformValidator = {
         let send = true;
 
         let inputs = form.querySelectorAll('input, textarea');
-
+        let envioShow = form.querySelector('.contato .form-envio')
         contatoformValidator.clearError();
 
         for (let i = 0; i < inputs.length; i++) {
@@ -155,6 +157,7 @@ let contatoformValidator = {
 
         if (send) {
             form.submit();
+            envioShow.style.display = 'flex';
         }
     },
 
