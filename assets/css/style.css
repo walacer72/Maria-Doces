@@ -571,7 +571,7 @@ body {
 
     }
 
-    
+
 
     #Home .home-circulo1 {
         width: 35em;
@@ -626,12 +626,12 @@ body {
     .home-area2 .home-circulo1 img {
         width: 22em;
         top: -.5em;
-        
+
         left: -7em;
         position: relative;
     }
 
-    
+
 
     #Home .social-icons {
         flex-direction: column;
@@ -711,16 +711,7 @@ body {
         position: relative;
     }
 
-    #Home .home-circulo2 {
-        width: 20em;
-        height: 20em;
-        bottom: 18em;
-        position: relative;
-        left: .5em;
-        border: 10px solid var(--tenth-main);
 
-
-    }
 
     #Home .social-icons {
         flex-direction: column;
@@ -885,7 +876,8 @@ body {
         height: 70em;
         top: 42em;
         left: -20em;
-        border: 2em solid #ecec8d;
+        border: 2.5em solid rgb(250, 250, 135, .2);
+        opacity: .2;
 
     }
 
@@ -900,7 +892,8 @@ body {
         max-height: 50em;
         top: 48em;
         left: -25em;
-        border: 1.5em solid #ecec8d;
+        border: 2.5em solid rgb(250, 250, 135, .2);
+        opacity: .2;
         overflow-x: hidden;
     }
 
