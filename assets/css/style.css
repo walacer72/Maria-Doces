@@ -379,7 +379,7 @@ body {
 .home-area {
     display: flex;
     justify-content: space-between;
-    gap: 3em;
+    gap: 1em;
     height: calc(100vh + 80px);
 
 }
@@ -393,14 +393,14 @@ body {
     min-width: 50%;
     justify-content: center;
     margin: 0;
-    padding-bottom: 3em;
+    padding-top: 3em;
     cursor: default;
 
 }
 
 #Home .home-area1-info h1 {
 
-    font-size: 85px;
+    font-size: 45px;
     color: var(--sixth-main);
 
     padding-bottom: 10px;
@@ -409,12 +409,12 @@ body {
 }
 
 #Home .home-area1-info p {
-    font-size: 17px;
+    font-size: 13px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: var(--seventh-main);
     line-height: 1.7em;
-    width: 30em;
+
 }
 
 #Home .social-icons {
@@ -492,7 +492,7 @@ body {
 
 .home-area2 {
     position: relative;
-
+    flex: 1;
 
 }
 
@@ -522,8 +522,12 @@ body {
     background-color: var(--first-main);
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: 3s;
+    animation-delay: 1s;
 
+}
+
+#Home .home-area1-info .small {
+    display: none;
 }
 
 @keyframes slideLeft {
@@ -625,7 +629,7 @@ body {
 
     .home-area2 .home-circulo1 img {
         width: 22em;
-        top: -.5em;
+        top: 1em;
 
         left: -7em;
         position: relative;
@@ -647,15 +651,23 @@ body {
     #Home .home-area1-info h1 {
         font-size: 3.5em;
 
-        padding-top: 2em;
+        padding-top: 1em;
         text-align: center;
     }
 
     #Home .home-area1-info p {
-        text-align: center;
-        font-size: 1.2em;
+        text-align: start;
+        font-size: 1em;
         padding: 0;
+        display: none;
+    }
 
+    #Home .home-area1-info .small {
+        display: flex;
+    }
+
+    #Home .home-area1-info .smalltitle {
+        display: none;
     }
 
 
@@ -728,7 +740,7 @@ body {
 
     #Home .home-area1-info h1 {
         font-size: 3em;
-        padding-top: 2em;
+
         text-align: center;
 
     }
@@ -1062,7 +1074,7 @@ body {
 
 #verMaisBtn {
     margin-top: 1em;
-    padding: .7em;
+    padding: .5em;
     width: 15em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -1506,7 +1518,7 @@ textarea::placeholder {
 
 .contato .button {
     margin-top: 2em;
-    padding: 1em;
+    padding: .7em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1em;
