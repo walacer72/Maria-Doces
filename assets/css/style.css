@@ -1048,14 +1048,17 @@ body {
 .Produto-area .produto-item {
     display: none;
     list-style: none;
-    width: 12.5em;
-    height: auto;
+    width: 200px;
+    height: 300px;
     z-index: 99;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 0 1.5rem var(--eighth-main);
     overflow: hidden;
     transition: all 0.2s;
     animation: animationImg 1s ease-in-out forwards;
+
 }
 
 .Produto-area .produto-item:nth-child(-n+4) {
@@ -1106,7 +1109,7 @@ body {
     }
 }
 
-.Produtos .Produto-area li img,
+.Produtos .Produto-area .produto-item img,
 video {
     display: flex;
     justify-content: center;
@@ -1114,6 +1117,11 @@ video {
     width: 100%;
     height: 100%;
     transition: transform 0.4s;
+    object-fit: cover;
+    /* recorta e preenche sem distorcer */
+    object-position: center;
+    /* centraliza o foco do corte */
+    display: block;
 
 }
 
